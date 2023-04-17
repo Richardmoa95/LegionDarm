@@ -1,0 +1,36 @@
+<div class="imagenesAvisos">
+    <div class="imagenes__img">
+        <img class="img__iconos" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/Good Practice.jpg" alt="Basico">
+    </div>
+    <div class="imagenes__texto">
+        <p>
+            <b>Good Practice:</b>
+            Practically speaking, .NET Framework is Windows-only and a
+            legacy platform. Do not create new apps using it.
+        </p>
+    </div>
+</div><!-- .imagenesAvisos cierre-->
+
+<div class="imagenes">
+    <img class="img" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/Capitulo_1/1.2.4 Table.jpg" alt="Table of versions">
+</div><!-- .imagenes cierre-->
+
+<div class="imagenes">
+    <img class="img" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/Capitulo_1/Figure 1.1 Visual Studio Code for the Web live editing the book's GitHub repository.jpg" alt="Figura_1.1">
+    <div class="imagenes__textoFigura">
+        <b>Figura 1-1: </b><span>Visual Studio Code for the Web live editing the book's GitHub repository</span>
+    </div>
+</div><!--.imagenes cierre-->
+
+<div class="imagenesAvisos">
+    <div class="imagenes__img">
+        <img class="img__iconos" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/More Information.jpg" alt="More Information">
+    </div>
+    <div class="imagenes__texto">
+        <p>
+            <b>More Information:</b>
+            Practically speaking, .NET Framework is Windows-only and a
+            legacy platform. Do not create new apps using it.
+        </p>
+    </div>
+</div><!-- .imagenesAvisos cierre-->

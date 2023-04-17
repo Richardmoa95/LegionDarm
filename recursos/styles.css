@@ -214,12 +214,16 @@ h1,h2,h3 {
     text-align: justify;
     font-size: 2.1rem;
 }
+.contenedor__titulos--h1 {
+    font-size: 3.8rem;
+    text-align: left;
+}
 .contenedor__titulos--h2 {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
     text-align: left;
 }
 .contenedor__titulos--h3 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     text-align: left;
 }
 /* Imagenes */

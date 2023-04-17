@@ -24,7 +24,7 @@
     </nav>
 
     <main class="contenedor">
-        <section class="contenedor__titulos" id="Hello">
+        <section class="contenedor__titulos" id="1">
             <!-- Titulo-->
             <p>
                 In this first chapter, the goals are setting up your development environment, understanding
@@ -41,7 +41,7 @@
                 <div class="imagenes__textoFigura">
                     <b>Figura 1-1: </b><span>Visual Studio Code for the Web live editing the book's GitHub repository</span>
                 </div>
-            </div>
+            </div><!--.imagenes cierre-->
             <p>
                 You can compare your code to the solution code and easily copy and paste parts if
                 needed.
@@ -83,9 +83,9 @@
             </ul>
         </section>
         
-        <section class="contenedor__titulos" id="Settingup">
+        <section class="contenedor__titulos" id="1.1">
             <!-- Subtítulo-->
-            <h3 class="contenedor__titulos--h3">1.1 Setting up your development environment</h3>
+            <h1 class="contenedor__titulos--h1">1.1 Setting up your development environment</h1>
             <p>
                 Before you start programming, you'll need a code editor for C#. Microsoft has a family of code
                 editors and Integrated Development Environments (IDEs).
@@ -97,9 +97,9 @@
             </ul>
         </section>
         
-        <section class="contenedor__titulos" id="application">
+        <section class="contenedor__titulos" id="1.1.1">
             <!-- Subtítulo-->
-            <h3 class="contenedor__titulos--h3">1.1.1 Choosing the appropriate tool and application type for learning</h3>
+            <h2 class="contenedor__titulos--h2">1.1.1 Choosing the appropriate tool and application type for learning</h2>
             <p>
                 You can make the argument that the best tool is the one you are already
                 familiar with or that you or your team will use as your daily development tool. For that reason,
@@ -107,59 +107,477 @@
                 book.
             </p>
             <br>
-            I believe the best method for learning the C# and .NET topics in Chapters 1 to
-            12 is to build console applications.
+            <p>
+                I believe the best method for learning the C# and .NET topics in Chapters 1 to
+                12 is to build console applications. Then, in Chapter 13 to 19 onward, you will build websites,
+                services, and graphical desktop and mobile apps.
+            </p>
         </section>
         
-        <section class="contenedor__titulos" id="hipervínculos">
+        <section class="contenedor__titulos" id="1.1.1.1">
             <!-- Subtítulo-->
-            <h3 class="contenedor__titulos--h3">Hipervínculos</h3>
+            <h3 class="contenedor__titulos--h3">1.1.1.1 Using Visual Studio for Windows for general development</h3>
             <p>
-                En teoría, podemos acceder a todos los documentos de un sitio web escribiendo la URL en la barra de
-                navegación del navegador. Por ejemplo, si queremos acceder a la página For Masterminds, podemos 
-                insertar la URL http://www.formasterminds.com/ esindex.php, o http://www.formasterminds.com/ escontact.php 
-                para enviar un mensaje a su desarrollador. Aunque es posible acceder, no es práctico. En primer lugar, 
-                los usuarios no conocen los nombres que el desarrollador eligió para cada archivo.
-                En segundo lugar, los sitios web pueden estar compuestos por docenas o incluso miles de páginas web y la
-                mayoría de los documentos serían imposibles de encontrar. La
-                solución. Los hipervínculos, también llamados enlaces, son referencias a documentos dentro de las páginas de
-                un sitio web. Si el usuario hace clic en un enlace, el
-                navegador sigue esa referencia y el documento indicado por la URL se descarga y muestra en pantalla.
+                Microsoft Visual Studio 2022 for Windows can create most types of applications, including
+                console apps, websites, web services, desktop, and mobile apps.
+            </p>
+        </section>
+
+        <section class="contenedor__titulos" id="1.1.2">
+            <!-- Subtítulo-->
+            <h2 class="contenedor__titulos--h2">1.1.2 Downloading and installing Visual Studio 2022 for Windows</h2>
+            <p>
+                Since October 2014, Microsoft has made a professional quality edition of Visual Studio for
+                Windows available to students, open source contributors, and individuals for free. It is called
+                Community Edition. Any of the editions are suitable for this book. If you have not already
+                installed it, let's do so now:
+            </p>
+            <ol type="number">
+                <li>
+                    Download Microsoft Visual Studio 2022 version 17.0 or later for Windows from the
+                    following link: <a href="https://visualstudio.microsoft.com/downloads/" target="_blank">https://visualstudio.microsoft.com/downloads/.</a>
+                </li>
+                <li>
+                    Start the installer.
+                </li>
+                <li>
+                    On the <b>Workloads</b> tab, select the following:
+                </li>
+                <ul>
+                    <li>
+                        ASP.NET and web development
+                    </li>
+                    <li>
+                        Azure development
+                    </li>
+                    <li>
+                        .NET desktop development
+                    </li>
+                    <li>
+                        Desktop development with C++
+                    </li>                    
+                    <li>
+                        Universal Windows Platform development
+                    </li>                    
+                    <li>
+                        Mobile development with .NET
+                    </li>
+                </ul>
+                <li>
+                    On the Individual components tab, in the Code tools section, select the following:
+                </li>
+                <ul>
+                    <li>
+                        Class Designer
+                    </li>
+                    <li>
+                        Git for Windows
+                    </li>
+                    <li>
+                        PreEmptive Protection - Dotfuscator
+                    </li>
+                </ul>
+                <li>
+                    Click Install and wait for the installer to acquire the selected software and install it.
+                </li>
+                <li>
+                    When the installation is complete, click Launch.
+                </li>
+                <li>
+                    The first time that you run Visual Studio, you will be prompted to sign in. If you have a
+                    Microsoft account, you can use that account. If you don't, then register for a new one at
+                    the following link: <a href="https://signup.live.com/">https://signup.live.com/.</a>
+                </li>
+                <li>
+                    The first time that you run Visual Studio, you will be prompted to configure your
+                    environment. For Development Settings, choose Visual C#. For the color theme, I
+                    chose Blue, but you can choose whatever tickles your fancy.
+                </li>
+                <li>
+                    If you want to customize your keyboard shortcuts, navigate to Tools | Options…, and
+                    then select the Keyboard section.
+                </li>
+            </ol>
+        </section>
+
+        <section class="contenedor__titulos" id="1.2">
+            <!-- Subtítulo-->
+            <h1 class="contenedor__titulos--h1">1.2 Understanding .NET</h1>
+            <p>
+                .NET 6, .NET Core, .NET Framework, and Xamarin are related and overlapping platforms for
+                developers used to build applications and services. In this section, I'm going to introduce you
+                to each of these .NET concepts.
+            </p>
+        </section>
+
+        <section class="contenedor__titulos" id="1.2.1">
+            <!-- Subtítulo-->
+            <h2 class="contenedor__titulos--h2">1.2.1 Understanding .NET Framework</h2>
+            <p>
+                .NET Framework is a development platform that includes a Common Language Runtime
+                (CLR), which manages the execution of code, and a Base Class Library (BCL), which provides
+                a rich library of classes to build applications from.
+            </p>
+            <br>
+            <p>
+                Microsoft originally designed .NET Framework to have the possibility of being cross-platform,
+                but Microsoft put their implementation effort into making it work best with Windows.
+            </p>
+            <br>
+            <p>
+                .NET Framework is installed
+                on over one billion computers, so it must change as little as possible. Even bug fixes can cause
+                problems, so it is updated infrequently.
             </p>
             <div class="imagenesAvisos">
                 <div class="imagenes__img">
-                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico">
+                    <img class="img__iconos" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/Good Practice.jpg" alt="Basico">
                 </div>
-                <div class="imagenesAvisos__texto">
+                <div class="imagenes__texto">
                     <p>
-                        <b>Lo básico:</b>
-                        Para crear un sitio web, debe programar los documentos correspondientes a cada página e incluir dentro de
-                        las mismas los enlaces. Estudiaremos cómo incorporar
-                        enlaces en nuestros documentos en el Capítulo 2.
+                        <b>Good Practice:</b>
+                        Practically speaking, .NET Framework is Windows-only and a
+                        legacy platform. Do not create new apps using it.
                     </p>
                 </div>
-            </div>
+            </div><!-- .imagenesAvisos cierre-->
         </section>
 
-        <section class="contenedor__titulos" id="URLabsolutasyrelativas">
+        <section class="contenedor__titulos" id="1.2.2">
             <!-- Subtítulo-->
-            <h3 class="contenedor__titulos--h3">URL absolutas y relativas</h3>
+            <h2 class="contenedor__titulos--h2">1.2.2 Understanding the Mono, Xamarin, and Unity projects</h2>
             <p>
-                Los hipervínculos son procesados por el navegador antes de ser usados para acceder a los documentos. Por
-                esta razón, se pueden definir con URL absolutas o
-                relativas. Las URL absolutas son aquellas que incluyen toda la información (ver Figura 1-3), mientras que
-                las relativas son aquellas que solo declaran la parte de
-                la ruta que el navegador tiene que agregar a la URL actual para acceder al recurso. Por ejemplo, si tenemos
-                un hipervínculo que referencia una imagen dentro del
-                directorio imagenes, podemos crear la URL http://www.ejemplo.com/imagenes/ miimagen.png, pero también tenemos
-                la opción de declararla como "imagenes/miimagen.png" y
-                el navegador se encargará de agregar a esta ruta la URL actual y descargar la imagen. Las URL relativas no
-                solo pueden determinar una ruta hacia abajo, sino también
-                hacia arriba de la jerarquía. Si el documento que queremos acceder es noticias.html, la URL relativa sería
-                ../noticias.html. Los dos puntos .. le indican al
-                navegador que el documento al que queremos acceder se encuentra dentro del directorio padre del actual
-                directorio
+                Third parties developed a .NET Framework implementation named the Mono project. Mono is
+                cross-platform, but it fell well behind the official implementation of .NET Framework.
             </p>
+            <br>
+            <p>
+                Mono has found a niche as the foundation of the Xamarin mobile platform as well as crossplatform
+                game development platforms like Unity.
+            </p>
+            <br>
+            <p>
+                Microsoft purchased Xamarin in 2016 and now gives away what used to be an expensive
+                Xamarin extension for free with Visual Studio. Microsoft renamed the Xamarin Studio
+                development tool, which could only create mobile apps, to Visual Studio for Mac and gave
+                it the ability to create other types of projects like console apps and web services.
+            </p>
+            <br>
+            <p>
+                Visual Studio 2022 for Mac was also rewritten to be a truly native macOS UI app to improve reliability
+                and work with macOS's built-in assistive technologies.
+            </p>
+        </section>
+
+        <section class="contenedor__titulos" id="1.2.3">
+            <!-- Subtítulo-->
+            <h2 class="contenedor__titulos--h2">1.2.3 Understanding .NET Core</h2>
+            <p>
+                Today, we live in a truly cross-platform world where modern mobile and cloud development
+                have made Windows, as an operating system, much less important. Because of that, Microsoft
+                has been working on an effort to decouple .NET from its close ties with Windows. While
+                rewriting .NET Framework to be truly cross-platform, they've taken the opportunity to refactor
+                and remove major parts that are no longer considered core.
+            </p>
+            <br>
+            <p>
+                This new product was branded .NET Core and includes a cross-platform implementation of the
+                CLR known as CoreCLR and a streamlined BCL known as CoreFX.
+            </p>
+            <br>
+            <p>
+                Most improvements that Microsoft makes to .NET Core and modern .NET cannot be
+                easily added to .NET Framework.
+            </p>
+        </section>
+
+        <section class="contenedor__titulos" id="1.2.4">
+            <!-- Subtítulo-->
+            <h2 class="contenedor__titulos--h2">1.2.4 Understanding the journey to one .NET</h2>
+            <p>
+                .NET Core has been renamed .NET and the major version number has skipped the number
+                four to avoid confusion with .NET Framework 4.x.
+            </p>
+            <br>
+            <p>
+                The following table shows when the key versions of modern .NET were released, when future
+                releases are planned, and which version is used by the various editions of this book:
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/Capitulo_1/1.2.4 Table.jpg" alt="Table of versions">
+            </div><!-- .imagenes cierre-->
+        </section>
+
+        <section class="contenedor__titulos" id="1.2.5">
+            <!-- Subtítulo-->
+            <h2 class="contenedor__titulos--h2">1.2.5 Understanding .NET support</h2>
+            <p>
+                .NET versions are either Long Term Support (LTS) or Current:
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        <b>LTS</b>
+                        Releases are stable and require fewer updates over their lifetime.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>Current</b>
+                        Releases include features that may change based on feedback.
+                    </p>
+                </li>
+            </ul>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/Capitulo_1/Figure 1.2 Support for various versions.jpg" alt="Figura_1.2">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 1-2: </b><span>Support for various versions</span>
+                </div>
+            </div><!--.imagenes cierre-->
+            <p>
+                For example, if you had created a project using .NET Core 3.0, then when Microsoft released
+                .NET Core 3.1 in December 2019, you had to upgrade your project to .NET Core 3.1 by March
+                2020.
+            </p>
+        </section>
+
+        <section class="contenedor__titulos" id="1.2.5.1">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">1.2.5.1 Understanding .NET Runtime and .NET SDK versions</h3>
+            <p>
+                .NET Runtime versioning follows semantic versioning, that is, a major increment indicates
+                breaking changes, minor increments indicate new features, and patch increments indicate bug
+                fixes.
+            </p>
+            <br>
+            <p>
+                .NET SDK versioning does not follow semantic versioning. The major and minor version
+                numbers are tied to the runtime version it is matched with. The patch number follows a
+                convention that indicates the major and minor versions of the SDK.
+            </p>
+            <br>
+            <p>
+                You can see an example of this in the following table:
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/Capitulo_1/1.2.5.1 Table.jpg" alt="Table of versions">
+            </div><!-- .imagenes cierre-->
+        </section>
+
+        <section class="contenedor__titulos" id="1.2.6">
+            <!-- Subtítulo-->
+            <h2 class="contenedor__titulos--h2">1.2.6 What is different about modern .NET?</h2>
+            <p>
+                Modern .NET is modularized. It is open source and Microsoft makes decisions about improvements and changes in the open.
+            </p>
+        </section>
+        
+        <section class="contenedor__titulos" id="1.2.6.1">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">1.2.6.1 Windows development</h3>
+            <p>
+                One of the features of modern .NET is support for running old Windows Forms and WPF
+                applications using the Windows Desktop Pack that is included with the Windows version of
+                .NET Core 3.1 or later, which is why it is bigger than the SDKs for macOS and Linux.
+            </p>
+        </section>
+
+        <section class="contenedor__titulos" id="1.2.6.2">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">1.2.6.2 Web development</h3>
+            <p>
+                ASP.NET Web Forms and Windows Communication Foundation (WCF) are old web
+                application and service technologies that fewer developers are choosing to use for new
+                development projects today, so they have also been removed from modern .NET. Instead,
+                developers prefer to use ASP.NET MVC, ASP.NET Web API, SignalR, and gRPC. These
+                technologies have been refactored and combined into a platform that runs on modern .NET,
+                named ASP.NET Core.
+            </p>
+        </section>
+
+        <section class="contenedor__titulos" id="1.2.6.3">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">1.2.6.3 Database development</h3>
+            <p>
+                <b>Entity Framework (EF)</b> 6 is an object-relational mapping technology that is designed to work
+                with data that is stored in relational databases such as Oracle and Microsoft SQL Server. It has
+                gained baggage over the years, so the cross-platform API has been slimmed down, has been
+                given support for non-relational databases like Microsoft Azure Cosmos DB, and has been
+                renamed Entity Framework Core. You will learn about it in Chapter 10, Working with Data Using
+                Entity Framework Core.
+            </p>
+        </section>
+
+        <section class="contenedor__titulos" id="1.2.7">
+            <!-- Subtítulo-->
+            <h2 class="contenedor__titulos--h2">1.2.7 Themes of modern .NET</h2>
+            <p>
+                Microsoft has created a website using Blazor that shows the major themes of modern .NET: 
+                <a href="https://themesof.net/">https://themesof.net/.</a>
+            </p>
+        </section>
+
+        <section class="contenedor__titulos" id="1.2.8">
+            <!-- Subtítulo-->
+            <h2 class="contenedor__titulos--h2">1.2.8 Understanding .NET Standard</h2>
+            <p>
+                The situation with .NET in 2019 was that there were three forked .NET platforms controlled by
+                Microsoft, as shown in the following list:
+            </p>
+            <ul>
+                <li>
+                    <b>.NET Core:</b> For cross-platform and new apps
+                </li>
+                <li>
+                    <b>.NET Framework:</b> For legacy apps
+                </li>
+                <li>
+                    <b>Xamarin:</b> For mobile apps
+                </li>
+            </ul>
+            <p>
+                Each had strengths and weaknesses because they were all designed for different scenarios. This
+                led to the problem that a developer had to learn three platforms, each with annoying quirks
+                and limitations.
+            </p>
+            <br>
+            <p>
+                Because of that, Microsoft defined .NET Standard &#45; a specification for a set of APIs that all .NET
+                platforms could implement to indicate what level of compatibility they have.
+            </p>
+            <br>
+            <p>
+                With the release of .NET 6 in November 2021, the need for .NET Standard has reduced
+                significantly because there is now a single .NET for all platforms, including mobile.
+            </p>
+        </section>
+
+        <section class="contenedor__titulos" id="1.2.9">
+            <!-- Subtítulo-->
+            <h2 class="contenedor__titulos--h2">1.2.9 Understanding intermediate language</h2>
+            <p>
+                The C# compiler (named Roslyn) used by the dotnet CLI tool converts your C# source code
+                into intermediate language (IL) code and stores the IL in an assembly (a DLL or EXE file). IL
+                code statements are like assembly language instructions, which are executed by .NET's virtual
+                machine, known as CoreCLR.
+            </p>
+            <br>
+            <p>
+                At runtime, CoreCLR loads the IL code from the assembly, the just-in-time (JIT) compiler
+                compiles it into native CPU instructions, and then it is executed by the CPU on your machine.
+            </p>
+            <br>
+            <p>
+                The benefit of this two-step compilation process is that Microsoft can create CLRs for Linux
+                and macOS, as well as for Windows.
+            </p>
+        </section>
+
+        <section class="contenedor__titulos" id="1.2.10">
+            <!-- Subtítulo-->
+            <h2 class="contenedor__titulos--h2">1.2.10 Comparing .NET technologies</h2>
+            <p>
+                We can summarize and compare .NET technologies today, as shown in the following table:
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/Capitulo_1/1.2.11 Table1.jpg" alt="Table of versions">
+                <img class="img" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/Capitulo_1/1.2.11 Table2.jpg" alt="Table of versions">
+            </div><!-- .imagenes cierre-->
+        </section>
+
+        <section class="contenedor__titulos" id="1.3">
+            <!-- Subtítulo-->
+            <h1 class="contenedor__titulos--h1">1.3 Building console apps using Visual Studio 2022</h1>
+            <p>
+                The goal of this section is to showcase how to build a console app using Visual Studio 2022 for
+                Windows.
+            </p>
+        </section>
+
+        <section class="contenedor__titulos" id="1.3.1">
+            <!-- Subtítulo-->
+            <h2 class="contenedor__titulos--h2">1.3.1 Managing multiple projects using Visual Studio 2022</h2>
+            <p>
+                Visual Studio 2022 has a concept named a solution that allows you to open and manage
+                multiple projects simultaneously. We will use a solution to manage the two projects that you
+                will create in this chapter.
+            </p>
+        </section>
+
+        <section class="contenedor__titulos" id="1.3.2">
+            <!-- Subtítulo-->
+            <h2 class="contenedor__titulos--h2">1.3.2 Writing code using Visual Studio 2022</h2>
+            <p>
+                Let's get started writing code!
+            </p>
+            <ol>
+                <li>
+                    Start Visual Studio 2022.
+                </li>
+                <li>
+                    In the Start window, click Create a new project.
+                </li>
+                <li>
+                    In the Create a new project dialog, enter console in the Search for templates box, and
+                    select Console Application, making sure that you have chosen the C# project template
+                    rather than another language, such as F# or Visual Basic, as shown in Figure 1.3:
+                    <div class="imagenes">
+                        <img class="img" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/Capitulo_1/Figure 1.3 Selecting the Console Application project template.jpg" alt="Figura_1.3">
+                        <div class="imagenes__textoFigura">
+                            <b>Figura 1-3: </b><span>Selecting the Console Application project template</span>
+                        </div>
+                    </div><!--.imagenes cierre-->
+                </li>
+                <li>
+                    Click Next.
+                </li>
+                <li>
+                    In the Configure your new project dialog, enter HelloCS for the project name, enter C:\
+                    Code for the location, and enter Chapter01 for the solution name, as shown in Figure 1.4:
+                    <div class="imagenes">
+                        <img class="img" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/Capitulo_1/Figure 1.4 Configuring names and locations for your new project.jpg" alt="Figura_1.4">
+                        <div class="imagenes__textoFigura">
+                            <b>Figura 1-4: </b><span>Configuring names and locations for your new project</span>
+                        </div>
+                    </div><!--.imagenes cierre-->
+                </li>
+                <li>
+                    Click Next.
+                    <div class="imagenesAvisos">
+                        <div class="imagenes__img">
+                            <img class="img__iconos" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/Note.jpg" alt="Note">
+                        </div>
+                        <div class="imagenes__texto">
+                            <p>
+                                <b>Note:</b>
+                                We are deliberately going to use the older project template for .NET
+                                5.0 to see what a full console application looks like. In the next section,
+                                you will create a console application using .NET 6.0 and see what has
+                                changed.
+                            </p>
+                        </div>
+                    </div><!-- .imagenesAvisos cierre-->
+                </li>
+                <li>
+                    In the Additional information dialog, in the Target Framework drop-down list, note
+                    the choices of Current and long-term support versions of .NET, and then select .NET 5.0
+                    (Current) and click Create.
+                </li>
+                <li>
+                    In Solution Explorer, double-click to open the file named Program.cs, and note that
+                    Solution Explorer shows the HelloCS project, as shown in Figure 1.5:
+                    <div class="imagenes">
+                        <img class="img" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/Capitulo_1/Figure 1.5 Editing Program.cs in Visual Studio 2022.jpg" alt="Figura_1.5">
+                        <div class="imagenes__textoFigura">
+                            <b>Figura 1-5: </b><span>Editing Program.cs in Visual Studio 2022</span>
+                        </div>
+                    </div><!--.imagenes cierre-->
+                </li>
+                <li>
+                    In Program.cs, modify line 9 so that the text that is being written to the console says
+                    Hello, C#!
+                </li>
+            </ol>
         </section>
     </main>
     <footer class="footer">
