@@ -1,0 +1,61 @@
+<div class="imagenesAvisos">
+    <div class="imagenes__img">
+        <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico">
+    </div>
+    <div class="imagenes__texto">
+        <p>
+            <b>Lo básico:</b>
+            En general, todo elemento puede ser anidado, convertirse en un contenedor o ser contenido. Los elementos
+            exclusivamente estructurales como &lt;html&gt;,
+            &lt;head&gt; y &lt;body&gt; tienen un lugar específico en un documento HTML, pero el resto son flexibles,
+            tal como veremos en el Capítulo 2.
+        </p>
+    </div>
+</div><!-- .imagenesAvisos cierre-->
+
+<div class="imagenesAvisos">
+    <div class="imagenes__img">
+        <img class="img__iconos" src="/imagenes/Importante.jpg" alt="Importante">
+    </div>
+    <div class="imagenes__texto">
+        <p>
+            <b>IMPORTANTE:</b>
+            Los lenguajes de servidor utilizan su propia tecnología, pero trabajan junto con HTML5 para llevar un
+            registro de las cuentas de usuarios, almacenar información
+            en el servidor, manejar bases de datos, etc.
+        </p>
+    </div>
+</div><!-- .imagenesAvisos cierre-->
+
+<div class="imagenesAvisos">
+    <div class="imagenes__img">
+        <img class="img__iconos" src="/imagenes/Hágalo usted mismo.jpg" alt="Hágalo usted mismo">
+    </div>
+    <div class="imagenes__texto">
+        <p>
+            <b>Hágalo usted mismo:</b>
+            Abra Atom o su editor favorito y cree un nuevo archivo
+            llamado index.html para probar los códigos de este capítulo (también puede
+            usar el archivo creado en el capítulo anterior).
+        </p>
+    </div>
+</div><!-- .imagenesAvisos cierre-->
+
+            <hr class="linea"><!-- Apertura de código-->
+                <pre class="codigo">
+                    <code class="codigo__pre">
+                        &lt;!DOCTYPE html&gt;
+                    </code>
+                </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-1:</b><span>Incluyendo la declaración &lt;!DOCTYPE&gt;</span>
+            </div><!-- Cierre de código-->
+
+
+<div class="imagenes">
+    <img class="img" src="/imagenes/Capitulo_2/Figura 2-5 Líneas de texto definidas con elementos p.jpg" alt="Figura 2-5">
+    <div class="imagenes__textoFigura">
+        <b>Figura 2-5: </b><span>Líneas de texto definidas con elementos &lt;p&gt;</span>
+    </div>
+</div><!-- .imagenes cierre-->

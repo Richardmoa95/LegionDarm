@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Capítulo 1</title>
+    <meta charset="utf-8">
+    <meta name="description" content="La funcionalidad de los Sitios Web">
+    <meta name="keywords" content="Sitios Web, Archivos, Dominios y URL, Hipervínculos, URL absolutas y relativas">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Krub:wght@400;700&family=Roboto:wght@900&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="icon" href="/imagenes/icons/cabecera_libro.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="/recursos/styles.css">
+    <link rel="stylesheet" href="/recursos/normalize.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">01 <span>Hello, C#! Welcome, .NET!</span></h1>
+    </header>
+
+    <nav class="navegacionFront">
+        <a class="navegacionFront__enlace" href="/index.html">Inicio</a>
+        <a class="navegacionFront__enlace" href="#">|</a>
+    </nav>
+
+    <main class="contenedor">
+        <section class="contenedor__titulos" id="Hello">
+            <!-- Titulo-->
+            <p>
+                In this first chapter, the goals are setting up your development environment, understanding
+                the similarities and differences between modern .NET, .NET Core, .NET Framework, Mono,
+                Xamarin, and .NET Standard, creating the simplest application possible with C# 10 and .NET 6
+                using various code editors, and then discovering good places to look for help.
+                <br><br>
+                The GitHub repository for this book has solutions using full application projects for all code
+                tasks and notebooks when possible:
+                <a href="https://github.com/markjprice/cs10dotnet6" target="_blank">https://github.com/markjprice/cs10dotnet6</a> 
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/CSharp10andNET6ModernCross-PlatformDevelpment/Capitulo_1/Figure 1.1 Visual Studio Code for the Web live editing the book's GitHub repository.jpg" alt="Figura_1.1">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 1-1: </b><span>Visual Studio Code for the Web live editing the book's GitHub repository</span>
+                </div>
+            </div>
+            <p>
+                You can compare your code to the solution code and easily copy and paste parts if
+                needed.
+                <br><br>
+                Throughout this book, I use the term modern .NET to refer to .NET 6 and its predecessors like
+                .NET 5 that come from .NET Core. I use the term legacy .NET to refer to .NET Framework,
+                Mono, Xamarin, and .NET Standard. Modern .NET is a unification of those legacy platforms
+                and standards.
+            </p>
+            <br>
+            <p>
+                This first chapter covers the following topics:
+            </p>
+            <ul>
+                <li>
+                    Setting up your development environment
+                </li>
+                <li>
+                    Understanding .NET
+                </li>
+                <li>
+                    Building console apps using Visual Studio 2022
+                </li>
+                <li>
+                    Building console apps using Visual Studio Code
+                </li>
+                <li>
+                    Exploring code using .NET Interactive Notebooks
+                </li>
+                <li>
+                    Reviewing the folders and files for projects
+                </li>
+                <li>
+                    Making good use of the GitHub repository for this book
+                </li>
+                <li>
+                    Looking for help
+                </li>
+            </ul>
+        </section>
+        
+        <section class="contenedor__titulos" id="Settingup">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">1.1 Setting up your development environment</h3>
+            <p>
+                Before you start programming, you'll need a code editor for C#. Microsoft has a family of code
+                editors and Integrated Development Environments (IDEs).
+            </p>
+            <ul>
+                <li>
+                    Visual Studio 2022 for Windows
+                </li>
+            </ul>
+        </section>
+        
+        <section class="contenedor__titulos" id="application">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">1.1.1 Choosing the appropriate tool and application type for learning</h3>
+            <p>
+                You can make the argument that the best tool is the one you are already
+                familiar with or that you or your team will use as your daily development tool. For that reason,
+                I want you to be free to choose any C# code editor or IDE to complete the coding tasks in this
+                book.
+            </p>
+            <br>
+            I believe the best method for learning the C# and .NET topics in Chapters 1 to
+            12 is to build console applications.
+        </section>
+        
+        <section class="contenedor__titulos" id="hipervínculos">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">Hipervínculos</h3>
+            <p>
+                En teoría, podemos acceder a todos los documentos de un sitio web escribiendo la URL en la barra de
+                navegación del navegador. Por ejemplo, si queremos acceder a la página For Masterminds, podemos 
+                insertar la URL http://www.formasterminds.com/ esindex.php, o http://www.formasterminds.com/ escontact.php 
+                para enviar un mensaje a su desarrollador. Aunque es posible acceder, no es práctico. En primer lugar, 
+                los usuarios no conocen los nombres que el desarrollador eligió para cada archivo.
+                En segundo lugar, los sitios web pueden estar compuestos por docenas o incluso miles de páginas web y la
+                mayoría de los documentos serían imposibles de encontrar. La
+                solución. Los hipervínculos, también llamados enlaces, son referencias a documentos dentro de las páginas de
+                un sitio web. Si el usuario hace clic en un enlace, el
+                navegador sigue esa referencia y el documento indicado por la URL se descarga y muestra en pantalla.
+            </p>
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico">
+                </div>
+                <div class="imagenesAvisos__texto">
+                    <p>
+                        <b>Lo básico:</b>
+                        Para crear un sitio web, debe programar los documentos correspondientes a cada página e incluir dentro de
+                        las mismas los enlaces. Estudiaremos cómo incorporar
+                        enlaces en nuestros documentos en el Capítulo 2.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor__titulos" id="URLabsolutasyrelativas">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">URL absolutas y relativas</h3>
+            <p>
+                Los hipervínculos son procesados por el navegador antes de ser usados para acceder a los documentos. Por
+                esta razón, se pueden definir con URL absolutas o
+                relativas. Las URL absolutas son aquellas que incluyen toda la información (ver Figura 1-3), mientras que
+                las relativas son aquellas que solo declaran la parte de
+                la ruta que el navegador tiene que agregar a la URL actual para acceder al recurso. Por ejemplo, si tenemos
+                un hipervínculo que referencia una imagen dentro del
+                directorio imagenes, podemos crear la URL http://www.ejemplo.com/imagenes/ miimagen.png, pero también tenemos
+                la opción de declararla como "imagenes/miimagen.png" y
+                el navegador se encargará de agregar a esta ruta la URL actual y descargar la imagen. Las URL relativas no
+                solo pueden determinar una ruta hacia abajo, sino también
+                hacia arriba de la jerarquía. Si el documento que queremos acceder es noticias.html, la URL relativa sería
+                ../noticias.html. Los dos puntos .. le indican al
+                navegador que el documento al que queremos acceder se encuentra dentro del directorio padre del actual
+                directorio
+            </p>
+        </section>
+    </main>
+    <footer class="footer">
+        &copy; Derechos Reservados 2023
+    </footer>
+</body>
+
+</html>

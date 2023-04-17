@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>1.3 Herramientas</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Configuración de un sitio web en un servidor">
+    <meta name="keywords" content="Herramientas, Editores, Registro de dominios, Alojamiento web, Programas FTP, MAMP">
+    <link rel="icon" href="/imagenes/icons/cabecera_libro.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Krub:wght@400;700&family=Roboto:wght@900&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/recursos/styles.css">
+    <link rel="stylesheet" href="/recursos/normalize.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">Capítulo 1 <span>Desarrollo Web</span></h1>
+    </header>
+
+    <nav class="navegacionFront">
+        <a class="navegacionFront__enlace" href="/index.html">Inicio</a>
+        <a class="navegacionFront__enlace" href="2.1.Estructura.html">2.1 Estructura</a>
+    </nav>
+
+    <main class="contenedor">
+        <section class="contenedor__titulos" id="herramientas">
+            <!-- Titulo-->
+            <h2 class="contenedor__titulos--h2">1.3 Herramientas</h2>
+            <p>
+                Crear un sitio web involucra múltiples pasos. Programar los documentos en HTML, crear los archivos con los
+                estilos CSS y los códigos en JavaScript, configurar el
+                servidor y transferir todos los archivos desde nuestro ordenador al servidor. Por fortuna existen muchas
+                herramientas disponibles que nos pueden ayudar con estas
+                tareas. Son ciles de usar y la mayoría se ofrecen de forma gratuita.
+            </p>
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Importante.jpg" alt="Importante">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>IMPORTANTE:</b>
+                        En esta sección del capítulo introducimos todas las herramientas que necesitará para crear sus sitios web. Esto
+                        incluye las herramientas requeridas para programar
+                        y diseñar un sitio web, pero también otras que necesitará para configurarlo y probarlo antes de hacerlo público.
+                        La mayoría de los ejemplos de este libro no tienen
+                        que subirse a un servidor para poder trabajar adecuadamente, por lo tanto, puede ignorar parte de esta
+                        información.
+                    </p>
+                </div>
+            </div> 
+        </section>
+
+        <section class="contenedor__titulos" id="editores">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">Editores</h3>
+            <p>
+                Los documentos HTML, los archivos CSS y JavaScript, son archivos de texto, por lo que podemos usar cualquier
+                editor como el bloc de notas de Windows o la aplicación
+                editor de texto de los ordenadores de Apple, pero existen editores de texto especialmente diseñados para
+                programadores y desarrolladores web que pueden simplificar
+                nuestro trabajo. La siguiente es una lista de los editores y de IDE (Integrated Development Environments) más
+                populares.
+            </p>
+            <ul>
+                <li>
+                    <b>Atom</b>
+                </li>
+                <li>
+                    <b>Brackets</b>
+                </li>
+                <li>
+                    <b>KompoZer</b>
+                </li>
+                <li>
+                    <b>Aptana</b>
+                </li>
+                <li>
+                    <b>NetBeans</b>
+                </li>
+                <li>
+                    <b>Sublime</b>
+                </li>
+                <li>
+                    <b>Komodo</b>
+                </li>
+                <li>
+                    <b>Dreamweaver</b>
+                </li>
+            </ul>
+            <p>
+                Trabajar con un editor es simple: tenemos que crear un directorio en nuestro disco duro donde vamos a almacenar
+                los archivos del sitio web, abrir el editor, y
+                crear dentro de este directorio todos los archivos y directorios adicionales que necesitamos para nuestro
+                proyecto. La Figura 1-6 muestra cómo se ve el editor
+                Atom cuando se abre por primera vez.
+            </p>
+
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_1/Figura 1-6 Editor Atom con un archivo vacío.jpg" alt="Figura 1-6">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 1-6: </b><span>Editor Atom con un archivo vacío</span>
+                </div>
+            </div> <!-- .imagenes cierre-->
+            <p>
+                Este editor tiene una opción en el menú File (Archivo) para abrir un proyecto (Add Project Folder). La opción se
+                muestra en la Figura 1-7, número 1.
+            </p>
+
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_1/Figura 1-7 Opción para agregar un proyecto.jpg" alt="Figura 1-7">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 1-7: </b><span>Opción para agregar un proyecto</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <p>
+                Si hacemos clic en esta opción y luego seleccionamos el directorio creado para nuestro proyecto, el editor abre
+                un nuevo panel a la izquierda con la lista de
+                archivos dentro del directorio. La Figura 1-8, a continuación, muestra un directorio llamado Test creado para
+                contener los archivos del ejemplo de la Figura 1-2.
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_1/Figura 1-8 Archivos del proyecto.jpg" alt="Figura 1-8">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 1-8: </b><span>Archivos del proyecto</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Hágalo usted mismo.jpg" alt="Hágalo usted mismo">
+                </div>
+                <div class="imagenes__texto">   
+                    <p>
+                        <b>Hágalo usted mismo:</b>
+                        Visite www.atom.io para descargar el editor Atom. Una vez que el editor esté instalado en su ordenador, cree un
+                        nuevo directorio en su disco duro para almacenar los
+                        archivos de su sitio web. Abra Atom, vaya al menú File y seleccione la opción Add Project Folder (Figura 1-7,
+                        número 1). Seleccione el directorio que acaba de
+                        crear. Abra de nuevo el menú File y seleccione la opción New File (Nuevo Archivo). Copie el código del Listado
+                        1-1 y grabe el archivo con el nombre index.html.
+                        Después de seleccionar el archivo en el panel de la izquierda, debería ver algo similar a lo que se muestra en
+                        la Figura 1-8.
+                    </p>              
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Importante.jpg" alt="Importante">
+                </div>
+                <div class="imagenes__texto">   
+                    <p>
+                        <b>IMPORTANTE:</b>
+                        Explicar cómo trabajar con Atom, u otro editor, va más allá del propósito de este libro.
+                    </p>           
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+        </section>
+
+        <section class="contenedor__titulos" id="registrodedominios">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">Registro de dominios</h3>
+            <p>
+                Una vez que nuestro sitio web está listo para ser presentado en público, tenemos que registrar el dominio. El
+                nombre puede ser cualquiera y contamos con varias
+                opciones para definir la extensión, desde extensiones con propósitos comerciales, como .com o .biz., a aquellas
+                sin ánimo de lucro o personales, como .org, .net
+                o .info, extensiones regionales para determinar la ubicación del sitio web, como .co.uk o .eu. Para obtener un
+                domino para nuestro sitio web, tenemos que abrir
+                una cuenta con un registrante y adquirirlo. La mayoría de los dominios requieren del pago de un arancel anual.
+                Hay muchas compañías disponibles que pueden hacerse
+                cargo del trámite por nosotros, la más popular es GoDaddy (www.godaddy.com). Cuando el dominio está registrado,
+                el sistema nos pide los nombres de servidores
+                (nameservers) que queremos asociar al dominio. Estos nombres son cadenas de texto compuestas por un dominio y un
+                prefijo, generalmente NS1 y NS2, que determinan
+                la ubicación de nuestro sitio web (los nombres de servidor o nameservers los facilita el servidor en el que se
+                almacena nuestro sitio web).
+            </p>
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Importante.jpg" alt="Importante">
+                </div>
+                <div class="imagenes__texto">                 
+                    <p>
+                        <b>IMPORTANTE:</b>
+                        La compañía que registra su dominio asigna nombres de servidor por defecto que ellos usan como destino
+                        provisional (también conocido como aparcamiento o parking).
+                        En principio puede asignar estos nombres y cambiarlos más adelante cuando su servidor esté listo. Algunas
+                        compañías ofrecen el registro de dominio junto con el
+                        alquiler de servidores y, por lo tanto, pueden encargarse de la configuración del dominio por nosotros si usamos
+                        sus servidores.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            
+        </section>
+
+        <section class="contenedor__titulos" id="alojamientoweb">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">Alojamiento web</h3>
+            <p>
+                Configurar y mantener un servidor exige conocimientos que no todos los desarrolladores
+                poseen. Por este motivo, existen compañías que ofrecen un servicio llamado alojamiento web
+                (web hosting), que permite a cualquier individuo alquilar un servidor configurado y listo para
+                almacenar, y operar uno o múltiples sitios web.
+                Existen diferentes tipos de alojamiento web, desde aquellos que permiten que
+                varios sitios web operen desde un mismo servidor (alojamiento compartido) hasta servicios que reservan un
+                servidor completo para un único sitio web (alojamiento
+                dedicado), o distribuyen un sitio web extenso en muchos servidores (alojamiento en la nube). La principal
+                ventaja de tener una cuenta de alojamiento web es que todas ofrecen un panel
+                de control con opciones para crear y configurar nuestro sitio web. Las siguientes son las
+                opciones más comunes.
+            </p>
+            <ul>
+                <li class="listas">
+                    <p>
+                        <b>File Manager</b>
+                        Es una herramienta web que nos permite administrar los archivos de
+                        nuestro sitio. Con esta herramienta podemos subir, bajar, editar o eliminar archivos
+                        en el servidor desde el navegador, sin tener que usar ninguna otra aplicación.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>FTP Accounts</b>
+                        Es un servicio que nos permite administrar las cuentas que usamos para
+                        conectarnos al servidor por medio de FTP. FTP (File Transfer Protocol) es un protocolo
+                        de comunicación diseñado para transferir archivos desde un ordenador a otro en la red.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>MySQL Databases</b>
+                        Es un servicio que nos permite crear bases de datos para nuestro
+                        sitio web.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>   
+                        <b>phpMyAdmin</b>
+                        Es una aplicación programada en PHP que podemos usar para
+                        administrar las bases de datos creadas para nuestro sitio web.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>Email Accounts</b>
+                        Es un servicio que nos permite crear cuentas de email con el dominio
+                        de nuestro sitio web (por ejemplo, info@midominio.com).
+                    </p>
+                </li>
+            </ul>
+            <p>
+                El panel de control más popular en el mercado es cPanel. La Figura 1-9 muestra el diseño y
+                algunas de las opciones que ofrece.
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_1/Figura 1-9 Opciones ofrecidas por cPanel.jpg" alt="Figura 1-9">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 1-9: </b><span>Opciones ofrecidas por cPanel</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <p>
+                El coste de una cuenta de alojamiento puede variar entre algunos dólares por una cuenta
+                compartida hasta cientos de dólares al mes por un servidor dedicado. Una vez que abrimos la cuenta,
+                la compañía nos envía un email con la información que necesitamos para acceder al panel de control
+                y configurar el servidor.
+            </p>
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico">
+                </div>
+                <div class="imagenes__texto">                 
+                    <p>
+                        <b>Lo básico:</b>
+                        Además de las cuentas de alojamiento de pago, existe el
+                        alojamiento gratuito que podemos usar para practicar, pero estos servicios
+                        incluyen propaganda o imponen restricciones que impiden el desarrollo de
+                        sitios web profesionales. Siempre se recomienda comenzar con una cuenta
+                        de alojamiento compartido que puede costar unos 5 dólares al mes para
+                        aprender cómo trabaja un servicio de alojamiento profesional y estudiar
+                        todas las opciones que ofrece. Varias compañías incluyen en sus servicios
+                        este tipo de alojamiento. Las más populares www.godaddy.com y www.hostgator.com.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+        </section>
+
+        <section class="contenedor__titulos" id="programasftp"> 
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">Programas FTP</h3>
+            <p>
+                Las cuentas de alojamiento web ofrecen un servicio para
+                administrar los archivos del sitio web desde el navegador. Esta es una página web a la que
+                podemos acceder desde el panel de control para subir, bajar y editar los archivos en el servidor.
+                Es una herramienta útil, pero solo práctica cuando necesitamos realizar pequeñas
+                modificaciones o subir unos pocos archivos. La herramienta aprovecha un sistema integrado en los navegadores y
+                que trabaja con un protocolo llamado FTP (File
+                Transfer Protocol) usado para transferir archivos desde un ordenador a otro en una red. Los
+                navegadores incluyen este sistema porque lo necesitan para permitir a los usuarios descargar
+                archivos, debido a que su principal propósito es descargar y mostrar sitios web en la
+                pantalla, ofrecen una mala experiencia a la hora de manipular estos archivos. Por esta razón, los
+                desarrolladores profesionales no utilizan el navegador sino programas diseñados
+                específicamente para transferir archivos entre un cliente y un servidor usando el protocolo FTP.
+                El mercado ofrece varios programas FTP, incluidas versiones de pago y gratuitas. El programa
+                gratuito más popular se llama Filezilla www.filezilla-project.org.
+                Este programa ofrece varios paneles con información acerca de la conexión y los ordenadores
+                que participan, incluidos dos paneles lado a lado con la lista de los archivos locales y remotos que
+                podemos transferir entre ordenadores con solo arrastrarlos de un panel a otro.
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_1/Figura 1-10 Interfaz de Filezilla.jpg" alt="Figura 1-10">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 1-10: </b><span>Interfaz de Filezilla</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <p>
+                Cuando abrimos una cuenta de alojamiento, el sistema crea automáticamente una cuenta
+                FTP para nuestro sitio web que incluye el nombre de usuario y clave requeridos para
+                conectarse al servidor usando este protocolo (si el sistema no configura esta cuenta, podemos
+                hacerlo nosotros mismos desde la opción FTP Accounts en el panel de control). Los valores
+                que necesitamos para realizar la conexión son el host (IP o dominio), el usuario y la clave,
+                además del puerto asignado por el servidor para conectarse por medio de FTP (por defecto,
+                21). Filezilla ofrece dos maneras de insertar esta información: una barra en la parte superior
+                con la que realizar una conexión rápida (Figura 1-11, número 2) y un botón para almacenar
+                múltiples conexiones de uso frecuente (Figura 1-11, número 1).
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_1/Figura 1-11 Configuración de conexiones.jpg" alt="Figura 1-11">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 1-11: </b><span>Configuración de conexiones</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <p>
+                Si pulsamos el botón para almacenar o acceder a conexiones previas (número 1), Filezilla abre
+                una ventana donde podemos administrar la lista de conexiones disponibles y especificar
+                opciones adicionales de configuración. La ventana incluye botones para crear, renombrar y
+                borrar una conexión (New Site, Rename, Delete), campos donde podemos seleccionar el
+                protocolo que deseamos utilizar (FTP para una conexión normal y SFTP para una conexión
+                segura), el modo de encriptación usado para transferir los archivos y el tipo de cuenta
+                requerida (Anonymous para conexiones anónimas o Normal para conexiones que requieren
+                usuario y clave). El programa también incluye paneles adicionales para una configuración más
+                avanzada, tal como muestra la Figura 1-12.
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_1/Figura 1-12 Administrador de conexiones.jpg" alt="Figura 1-12">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 1-12: </b><span>Administrador de conexiones</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <p>
+                En una situación normal, para establecer la conexión tenemos que insertar el host (el IP o
+                dominio de nuestro sitio web), seleccionar el tipo de cuenta como Normal, introducir el
+                nombre de usuario y la contraseña, y dejar el resto de los valores por defecto. Una vez que los
+                ordenadores se conectan, Filezilla muestra la lista de archivos en la pantalla. A la izquierda se encuentran los
+                archivos en el directorio seleccionado en nuestro ordenador (podemos
+                seleccionar cualquier directorio que queramos en nuestro disco duro), y a la derecha se
+                encuentran los archivos y directorios disponibles en el directorio raíz de nuestra cuenta de
+                alojamiento, como muestra la Figura 1-13.
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_1/Figura 1-13 Contenido del directorio raíz.jpg" alt="Figura 1-13">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 1-13: </b><span>Contenido del directorio raíz</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <p>
+                Cuando se crea una cuenta de alojamiento, el sistema incluye varios directorios y archivos
+                para almacenar la información (almacenar emails, hacer un
+                seguimiento de la actividad de los usuarios, etc.). El directorio en el que se deben almacenar
+                los archivos de nuestro sitio web se llama public_html. Podemos subir nuestros archivos arrastrándolos desde el
+                panel de la izquierda al
+                panel de la derecha (ver Figura 1-10).
+            </p>
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Importante.jpg" alt="Importante">
+                </div>
+                <div class="imagenes__texto">                 
+                    <p>
+                        <b>IMPORTANTE:</b>
+                        Va más allá del propósito de este libro explicar cómo funciona Filezilla o cualquier otro programa de FTP
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+        </section>
+
+        <section class="contenedor__titulos" id="mamp">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">MAMP</h3>
+            <p>
+                Aunque la mayoría de los ejemplos de este libro se pueden probar sin subirlos a un
+                servidor, abrir un sitio web en un ordenador personal no es siempre posible. Algunos códigos JavaScript solo
+                trabajan cuando se descargan desde
+                un servidor, y tecnologías de servidor como PHP requieren ser alojadas en un servidor para
+                funcionar. Para trabajar con estas clases de documentos existen dos alternativas: podemos
+                obtener una cuenta de alojamiento web de inmediato y usarla para hacer pruebas, o instalar
+                un servidor en nuestro propio ordenador. Esta última opción no hará que se pueda acceder a
+                nuestro sitio web desde Internet, pero nos permite probarlo. Existen varios paquetes que instalan los programas
+                necesarios para convertir
+                nuestro ordenador en un servidor. Estos paquetes incluyen un servidor Apache (para
+                despachar archivos web a través del protocolo HTTP), un servidor PHP (para procesar código
+                PHP), y un servidor MySQL (para procesar bases de datos de tipo MySQL que podemos usar
+                para almacenar datos en el servidor). El que recomendamos se llama MAMP. Es un paquete
+                gratuito, www.mamp.info (la empresa también ofrece una versión comercial avanzada
+                llamada MAMP PRO).
+                MAMP es fácil de instalar y usar.
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_1/Figura 1-15 Pantalla principal de MAMP.jpg" alt="Figura 1-15">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 1-15: </b><span>Pantalla principal de MAMP</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <p>
+                MAMP crea un directorio dentro de su propio directorio llamado htdocs donde se supone
+                que debemos almacenar los archivos de nuestro sitio web, pero podemos
+                asignar un directorio diferente desde la opción Preferences. La pestaña Web Server muestra el
+                directorio actual que usa el servidor Apache y ofrece un botón para seleccionar uno diferente,
+                tal como ilustra la Figura 1-16, número 1.
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_1/Figura 1-16 Directorio del servidor Apache.jpg" alt="Figura 1-16">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 1-16: </b><span>Directorio del servidor Apache</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <p>
+                Después de seleccionar el directorio en el que se encuentran los archivos de nuestro sitio
+                web. Apache crea un dominio especial llamado
+                localhost para referenciar al servidor y, por lo tanto, se puede acceder a nuestro sitio web
+                desde la URL http://localhost/. Si queremos acceder a un archivo específico, solo tenemos que
+                agregar el nombre del archivo al final de la URL (por ejemplo, http://localhost/contacto.html).
+            </p>
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Hágalo usted mismo.jpg" alt="Hágalo usted mismo">
+                </div>
+                <div class="imagenes__texto">                 
+                    <p>
+                        <b>Hágalo usted mismo:</b>
+                        Visite www.mamp.info y descargue la versión gratuita de 
+                        MAMP para su sistema (Windows o macOS). Instale el paquete y abra la
+                        aplicación. Seleccione la opción Preferences (Figura 1-15) y reemplace el
+                        directorio htdocs por el directorio que haya creado para su sitio web en el
+                        ejemplo anterior (Figura 1-8). Abra el navegador e inserte la URL
+                        http://localhost/. Si ha creado el archivo index.html como sugerimos
+                        anteriormente, debería ver el texto HOLA MUNDO! en la pantalla (Figura 1-14).
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico">
+                </div>
+                <div class="imagenes__texto">                 
+                    <p>
+                        <b>Lo básico:</b>
+                        La mayoría de los ejemplos de este libro se pueden ejecutar en un
+                        ordenador personal sin tener que instalar ningún servidor (le informaremos
+                        cuando esto no sea posible).
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+        </section>
+    </main>
+
+    <footer class="footer">
+        &copy; Derechos Reservados 2023
+    </footer>
+</body>
+
+</html>

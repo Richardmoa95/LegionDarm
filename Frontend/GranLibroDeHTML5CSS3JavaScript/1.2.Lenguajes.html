@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>1.2 Lenguajes</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lenguajes para crear un sitio web">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Lenguajes de servidor">
+    <link rel="icon" href="/imagenes/icons/cabecera_libro.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Krub:wght@400;700&family=Roboto:wght@900&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/recursos/styles.css">
+    <link rel="stylesheet" href="/recursos/normalize.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Capítulo 1 Desarrollo Web</h1>
+    </header>
+
+    <nav class="navegacionFront">
+        <a class="navegacionFront__enlace" href="/index.html">Inicio</a>
+        <a class="navegacionFront__enlace" href="1.3.Herramientas.html">1.3 Herramientas</a>
+    </nav>
+
+    <main class="contenedor">
+        <section class="contenedor__titulos" id="lenguajes">
+            <!-- Titulo-->
+            <h2 class="contenedor__titulos--h2">1.2 Lenguajes</h2>
+            <p>
+                HTML5 incorpora tres características (estructura, estilo, y funcionalidad), con lo que integra tres lenguajes de programación independientes: HTML, CSS, y 
+                JavaScript.
+            </p>
+        </section><!-- .contenedor__titulos cierre-->
+
+        <section class="contenedor__titulos" id="html">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">HTML</h3>
+            <p>
+                HTML (HyperText Markup Language) lenguaje compuesto por etiquetas definidas con un nombre rodeado de paréntesis angulares. Los paréntesis angulares delimitan la 
+                etiqueta y el nombre define el tipo de contenido. Por ejemplo, la etiqueta &lt;html&gt; indica que el contenido es código HTML. Algunas de estas etiquetas son 
+                declaradas individualmente (por ejemplo, &lt;br&gt;) y otras en pares &lt;html&gt;&lt;/html&gt; (en la etiqueta de cierre el nombre va precedido por una barra 
+                invertida). Las etiquetas pueden incluir atributos para ofrecer información acerca de sus contenidos (por ejemplo, &lt;html lang="es"&gt;). Las etiquetas 
+                individuales y de apertura y cierre se llaman elementos. Los elementos por una sola etiqueta se usan para modificar el contenido que los rodea o incluir recursos 
+                externos, mientras que los de apertura y cierre se utilizan para delimitar el contenido del documento, tal como ilustra la Figura 1-4.
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_1/Figura 1-4 Elemento HTML.jpg" alt="Elemento HTML">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 1-4: </b><span>Elemento HTML</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <p>
+                Se deben combinar múltiples elementos para definir un documento. Los elementos son listados en secuencia de arriba abajo y pueden contener otros elementos en su 
+                interior. Por ejemplo, el elemento &lt;html&gt; Figura 1-4 declara que su contenido debe ser interpretado como código HTML. Por lo tanto, el resto de los elementos 
+                se deben declarar entre las etiquetas &lt;html&gt; y &lt;/html&gt;. El siguiente ejemplo muestra un documento HTML sencillo que incluye elementos necesarios para 
+                definir una estructura básica y mostrar el mensaje HOLA MUNDO! en la pantalla.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="es"&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;Mi primer documento HTML&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;p&gt;HOLA MUNDO!&lt;/p&gt;
+                        &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 1-1: </b><span>Creando un documento HTML</span>
+            </div><!-- Cierre de código-->
+            <p>
+                En el ejemplo del Listado 1-1 en la primera línea, se encuentra una etiqueta individual que declara el tipo de documento (&lt;!DOCTYPE html&gt;) seguida por una 
+                etiqueta de apertura &lt;html lang="es"&gt;. Entre las etiquetas &lt;html&gt; y &lt;/html&gt; se incluyen otros elementos la cabecera y el cuerpo del documento 
+                (&lt;head&gt; y &lt;body&gt;), los cuales encierran más elementos (&lt;title&gt; y &lt;p&gt;), demostrando cómo se compone un documento HTML.
+            </p>
+
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico"> 
+                </div>
+                <div class="imagenes__texto">                 
+                    <p>
+                        <b>Lo básico:</b>
+                        En general, todo elemento puede ser anidado, convertirse en un contenedor o ser contenido. Los elementos exclusivamente estructurales como &lt;html&gt;, 
+                        &lt;head&gt; y &lt;body&gt; tienen un lugar específico en un documento HTML, pero el resto son flexibles, tal como veremos en el Capítulo 2.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+
+            <br>
+            <p>
+                La etiqueta de apertura &lt;html&gt; declarada en el Listado 1-1 no está solo compuesta por el nombre html y los paréntesis angulares, sino también por el texto 
+                lang="es". Este es un atributo con un valor. El valor es se asigna al atributo usando el carácter =. Los atributos ofrecen información adicional acerca del 
+                elemento y su contenido. En este caso, el atributo lang declara el idioma del contenido del documento (es por Español).
+            </p>
+            
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico"> 
+                </div>
+                <div class="imagenes__texto">                 
+                    <p>
+                        <b>Lo básico:</b>
+                        Los atributos se declaran siempre dentro de la etiqueta de apertura (o etiquetas individuales) y pueden tener un nombre y un valor, como el atributo lang de la 
+                        etiqueta &lt;html&gt;, o representar un valor por sí mismos, como el atributo html de la etiqueta &lt;!DOCTYPE&gt;. Estudiaremos los elementos HTML y sus atributos 
+                        en el Capítulo 2.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+        </section>
+
+        <section class="contenedor__titulos" id="css">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">CSS</h3>
+            <p>
+                CSS (Cascading Style Sheets) lenguaje que se utiliza para definir los estilos de los elementos HTML, como el tamaño, el color, el fondo, el borde, etc. Aunque los 
+                navegadores asignan estilos por defecto estos estilos generalmente están lejos de lo que queremos para nuestros sitios web. Para declarar estilos personalizados, 
+                CSS utiliza propiedades y valores. Esta construcción se llama declaración y su sintaxis incluye dos puntos después del nombre de la propiedad, y un punto y coma al 
+                final para cerrar la línea.
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_1/Figura 1-5 Propiedad CSS.jpg" alt="Propiedad CSS"> 
+                <div class="imagenes__textoFigura">
+                    <b>Figura 1-5: </b><span>Propiedad CSS</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <p>
+                En la Figura 1-5, el valor #FF0000 se asigna a la propiedad color. Si esta propiedad se aplica luego a un elemento HTML, el contenido de ese elemento se mostrará 
+                en color rojo (el valor #FF0000 representa el color rojo). Las propiedades CSS se pueden agrupar usando llaves. Un grupo de una o más propiedades se llama regla y 
+                se identifica por un nombre llamado selector.
+            </p>
+
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    body {
+                        width: 100%;
+                        margin: 0px;
+                        background-color: #FF0000;
+                    }
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 1-2: </b><span>Declarando reglas CSS</span>
+            </div><!-- Cierre de código-->
+
+            <p>
+                El Listado 1-2 declara una regla con tres propiedades: width, margin y backgroundcolor. Esta regla se identifica con el nombre body, lo que significa que las 
+                propiedades serán aplicadas al elemento &lt;body&gt;. Si incluimos esta regla en un documento, el contenido del documento se extenderán hacia los límites de la 
+                ventana del navegador y tendrán un fondo rojo.
+            </p>
+
+
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico"> 
+                </div>
+                <div class="imagenes__texto">                 
+                    <p>
+                        <b>Lo básico:</b>
+                        Existen diferentes técnicas para aplicar estilos CSS a elementos HTML. Estudiaremos las propiedades CSS en los Capítulos 3 y 4.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+        </section>
+
+        <section class="contenedor__titulos" id="javaScript">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">JavaScript</h3>
+            <p>
+                A diferencia de HTML y CSS, JavaScript es un lenguaje de programación comparable con cualquier otro como C++ o Java. Difiere de los demás lenguajes en que puede 
+                realizar tareas personalizadas, desde almacenar valores hasta calcular algoritmos complejos, incluida la capacidad de interactuar con los elementos del documento y 
+                procesar su contenido dinámicamente. Para declarar código JavaScript dentro de un documento, HTML ofrece el elemento &lt;script&gt;. El siguiente ejemplo muestra 
+                código escrito en JavaScript.
+            </p>
+
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;script&gt;
+                        function cambiarColor() {
+                        document.body.style.backgroundColor = "#0000FF";
+                        }
+                        document.addEventListener("click", cambiarColor);
+                    &lt;/script&gt;
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 1-3: </b><span>Declarando código JavaScript</span>
+            </div><!-- Cierre de código-->
+            <p>
+                El código en el Listado 1-3 cambia el color de fondo del elemento &lt;body&gt; a azul cuando el usuario hace clic en el documento.
+            </p>
+
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico"> 
+                </div>
+                <div class="imagenes__texto">                 
+                    <p>
+                        <b>Lo básico:</b>
+                        Con el elemento &lt;script&gt; también podemos cargar código JavaScript desde archivos externos. Estudiaremos el elemento &lt;script&gt; en el Capítulo 2 y el 
+                        lenguaje JavaScript en el Capítulo 6.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+        </section>
+
+        <section class="contenedor__titulos" id="lenguajesdeservidor">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">Lenguajes de servidor</h3>
+            <p>
+                Después de que los archivos del sitio web se suben al servidor, permanecen inalterables hasta que se descargan en un ordenador personal. ue esto permite la 
+                creación de sitios web útiles e interactivos, hay momentos en los cuales necesitamos procesar la información en el servidor antes de enviarla al usuario. El 
+                contenido producido por esta información se denomina contenido dinámico. Existen varios lenguajes disponibles PHP, Ruby, y Python. El siguiente ejemplo es una 
+                muestra de un código escrito en PHP.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;?php
+                        $nombre = $_GET['minombre'];
+                        print('Su nombre es: '.$nombre);
+                    ?&gt;
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 1-4: </b><span>Declarando código ejecutable en el servidor</span>
+            </div><!-- Cierre de código-->
+            <p>
+                El código del Listado 1-4 recibe un valor enviado por el navegador, lo almacena en la memoria y crea un mensaje con el mismo. Cuando se ejecuta este código, se 
+                crea un nuevo documento que contiene el mensaje final, el archivo se envía de vuelta al cliente y finalmente el navegador muestra su contenido en pantalla.
+            </p>
+
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Importante.jpg" alt="Importante">
+                </div>
+                <div class="imagenes__texto">                 
+                    <p>
+                        <b>IMPORTANTE:</b>
+                        Los lenguajes de servidor utilizan su propia tecnología, pero trabajan junto con HTML5 para llevar un registro de las cuentas de usuarios, almacenar información 
+                        en el servidor, manejar bases de datos, etc.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+        </section>
+    </main>
+    <footer class="footer">
+        &copy; Derechos Reservados 2023
+    </footer>
+</body>
+</html>

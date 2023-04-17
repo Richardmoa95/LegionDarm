@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <title>2.3 Formularios</title>
+    <link rel="icon" href="/imagenes/icons/cabecera_libro.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Krub:wght@400;700&family=Roboto:wght@900&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/recursos/styles.css">
+    <link rel="stylesheet" href="/recursos/normalize.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">Capítulo 2 HTML</h1>
+    </header>
+
+    <nav class="navegacionFront">
+        <a class="navegacionFront__enlace" href="/index.html">Inicio</a>
+        <a class="navegacionFront__enlace" href="#">#</a>
+    </nav>
+
+    <main class="contenedor">
+        <section class="contenedor__titulos" id="formularios">
+            <!-- Titulo-->
+            <h2 class="contenedor__titulos--h2">2.3 Formularios</h2>
+            <p>
+                Los formularios son herramientas que podemos incluir para permitir a los
+                usuarios insertar información, y enviarla al servidor para ser procesada. La
+                Figura 2-28 muestra algunas de las herramientas facilitadas este fin.
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_2/Figura 2-28 Formulario en el navegador.jpg" alt="Figura 2-28">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 2-28: </b><span>Formulario en el navegador</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+        </section>
+
+        <section class="contenedor__titulos" id="definicion">
+            <h3 class="contenedor__titulos--h3">Definición</h3>
+            <p>
+                Como se muestra en la Figura 2-28, los formularios pueden presentar varias herramientas. Cada una
+                de estas herramientas se representa por un elemento y el formulario queda definido por el elemento
+                &lt;form&gt;, que incluye etiquetas de apertura y cierre para agrupar al resto de los elementos y
+                requiere de algunos atributos para determinar cómo se envía la información al servidor.
+            </p>
+            <ul>
+                <li class="listas">
+                    <p>    
+                        <b>name--</b>
+                        Especifica el nombre del formulario. También se encuentra disponible para otros elementos,
+                        pero es particularmente útil para elementos de formulario.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>    
+                        <b>method--</b>
+                        Determina el método a utilizar para enviar la información al servidor. Existen dos valores
+                        GET y POST. El método GET se usa para enviar una cantidad limitada de información de forma
+                        pública (los datos son incluidos en la URL, la cual no puede contener más de 255 caracteres).
+                        El método POST se utiliza para enviar una cantidad ilimitada de información de forma privada
+                        (los datos no son visibles al usuario y pueden tener la longitud que necesitemos).
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>    
+                        <b>action--</b>
+                        Declara la URL del archivo en el servidor que va a procesar la información enviada por el
+                        formulario.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>    
+                        <b>target--</b>
+                        Determina dónde se mostrará la respuesta recibida desde el servidor. Los valores disponibles son
+                        _blank
+                        (nueva ventana), _self (mismo recuadro), _parent (recuadro padre), y _top (la ventana que
+                        contiene el
+                        recuadro). El valor _self se declara por defecto, lo que significa que la respuesta recibida
+                        desde el servidor
+                        se mostrará en la misma ventana.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>    
+                        <b>enctype--</b>
+                        Declara la codificación aplicada a los datos que envía el formulario. Puede tomar tres valores:
+                        application/x-www-form-urlencoded (los caracteres son codificados), multipart/form-data (los
+                        caracteres no son codificados), text/plain (solo los espacios son codificados). El primer valor
+                        se asigna por defecto.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>    
+                        <b>accept-charset--</b>
+                        Declara el tipo de codificación aplicada al texto del
+                        formulario. Los valores más comunes son UTF-8 e ISO-8859-1. El valor por defecto se
+                        asigna al documento con el elemento
+                        &lt;meta&gt; (ver Listado 2-6).
+                    </p>
+                </li>
+            </ul>
+            <p>
+                El siguiente ejemplo define un formulario básico. El atributo name identifica el formulario
+                con el nombre "formulario", el atributo method determina que los datos se incluirán en la URL
+                (GET), y el atributo action declara que procesar.php es el archivo que se ejecutará en el
+                servidor para procesar la información y devolver el resultado.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+                <pre class="codigo">
+                    <code class="codigo__pre">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="es"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="utf-8"&gt;
+                            &lt;title&gt;Formularios&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;section&gt;
+                                &lt;form name="formulario" method="get" action="procesar.php"&gt;
+        
+                                &lt;/form&gt;
+                            &lt;/section&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-45:</b><span>Definiendo un formulario con el elemento &lt;form&gt;</span>
+            </div><!-- Cierre de código-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Hágalo usted mismo.jpg" alt="Hágalo usted mismo">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>Hágalo usted mismo:</b>
+                        Cree un nuevo archivo HTML en su editor o modifique
+                        el archivo del ejemplo anterior con el código del Listado 2-45 y abra el
+                        documento en su navegador. En este momento no verá nada en la pantalla
+                        porque el formulario
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+        </section>
+
+        <section class="contenedor__titulos" id="elementos">
+            <h3 class="contenedor__titulos--h3">Elementos</h3>
+            <p>
+                Un formulario puede incluir diferentes herramientas para permitir al usuario seleccionar o
+                insertar información. HTML incluye múltiples elementos para crear estas herramientas. Los
+                siguientes son los más utilizados.
+            </p>
+            <ul>
+                <li class="listas">
+                    <p>
+                        <b>&lt;input&gt;--</b>
+                        Crea un campo de entrada. Puede recibir diferentes tipos de
+                        entradas, dependiendo del valor del atributo type.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;textarea&gt;--</b>
+                        Crea un campo de entrada para insertar múltiples líneas de
+                        texto. El tamaño se puede declarar en números enteros usando los atributos rows y cols,
+                        o en píxeles con estilos CSS, como veremos en el Capítulo 3.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;select&gt;--</b>
+                        Crea una lista de opciones que el usuario puede elegir. Trabaja
+                        junto con el elemento &lt;option&gt; para definir cada opción y el elemento &lt;optgroup&gt;
+                        para organizar las opciones en grupos.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;button&gt;--</b>
+                        Crea un botón. Incluye el atributo type para definir el
+                        propósito del botón. Los valores disponibles son submit para enviar el formulario (por
+                        defecto), reset para reiniciar el formulario, y button para realizar tareas personalizadas.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;output&gt;--</b>
+                        Representa un resultado producido por el formulario. Se
+                        implementa por medio de código JavaScript para mostrar el resultado de una operación al
+                        usuario.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;meter&gt;--</b>
+                        Representa una medida o el valor actual de un rango.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;progress&gt;--</b>
+                        Representa el progreso de una operación.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;datalist&gt;--</b>
+                        Crea un listado de valores disponibles para otros controles.
+                        Trabaja junto con el elemento &lt;option&gt; para definir cada valor.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;label&gt;--</b>
+                        Crea una etiqueta para identificar un elemento de formulario.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;fieldset&gt;--</b>
+                        Agrupa otros elementos de formulario. Se usa para crear secciones dentro de formularios
+                        extensos. puede contener un elemento &lt;legend&gt; para definir el título de la sección.
+                    </p>
+                </li>
+            </ul>
+            <p>
+                El elemento &lt;input&gt; es el más versátil de todos. Puede adoptar
+                diferentes características y aceptar varios tipos de valores dependiendo del valor de su
+                atributo type. Los siguientes son los valores disponibles para este atributo.
+            </p>
+            <ul>
+                <li class="listas">
+                    <p>
+                        <b>text--</b>
+                        Este valor genera un campo de entrada para insertar texto genérico.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>email--</b>
+                        Este valor genera un campo de entrada para insertar cuentas de correo.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>search--</b>
+                        Este valor genera un campo de entrada para insertar términos de búsqueda.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>url--</b>
+                        Este valor genera un campo de entrada para insertar URL.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>tel--</b>
+                        Este valor genera un campo de entrada para insertar números de teléfono.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>number--</b>
+                        Este valor genera un campo de entrada para insertar números.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>range--</b>
+                        Este valor genera un campo de entrada para insertar un rango de números.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>date--</b>
+                        Este valor genera un campo de entrada para insertar una fecha.
+                    </p>
+                </li>
+                <li class="listas">-
+                    <p>
+                        <b>datetime-loc-al</b>
+                        Este valor genera un campo de entrada para insertar fecha y hora.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>week--</b>
+                        Este valor genera un campo de entrada para insertar el número de la semana (dentro del año).
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>month--</b>
+                        Este valor genera un campo de entrada para insertar el número del mes.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>time--</b>
+                        Este valor genera un campo de entrada para insertar una hora (horas y minutos).
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>hidden--</b>
+                        Este valor oculta el campo de entrada. Se usa para enviar información complementaria al servidor.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>password--</b>
+                        Este valor genera un campo de entrada para insertar una clave. Reemplaza los caracteres insertados con 
+                        estrellas o puntos para ocultar información sensible.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>color--</b>
+                        Este valor genera un campo de entrada para insertar un color.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>checkbox--</b>
+                        Este valor genera una casilla de control que permite al usuario activar o desactivar una opción.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>radio--</b>
+                        Este valor genera un botón de opción para seleccionar una opción de varias posibles.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>file--</b>
+                        Este valor genera un campo de entrada para seleccionar un archivo en el ordenador del usuario.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>button--</b>
+                        Este valor genera un botón. El botón trabaja como el elemento &lt;button&gt; de tipo button. No realiza 
+                        ninguna acción por defecto; la acción debe ser definida desde JavaScript, como veremos en próximos capítulos.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>submit--</b>
+                        Este valor genera un botón para enviar el formulario.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>reset--</b>
+                        Este valor genera un botón para reiniciar el formulario.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>image--</b>
+                        Este valor carga una imagen que se usa como botón para enviar el formulario. Debe incluir el atributo src para 
+                        especificar la URL de la imagen.
+                    </p>
+                </li>
+            </ul>
+            <p>
+                Para incluir un formulario tenemos que declararlo con el elemento &lt;form&gt;, y luego incorporar en su interior todos los
+                elementos para insertar la información y enviarla al servidor. Por ejemplo, si queremos que el usuario inserte su nombre y 
+                edad, tenemos que incluir dos campos de entrada para texto y un tercer elemento para crear el botón con el que enviar el formulario.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+                <pre class="codigo">
+                    <code class="codigo__pre">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="es"&gt;
+                        &lt;head&gt;
+                        &lt;meta charset="utf-8"&gt;
+                        &lt;title&gt;Formularios&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                        &lt;section&gt;
+                        &lt;form name="formulario" method="get" action="procesar.php"&gt;
+                        &lt;p&gt;&lt;input type="text" name="nombre"&gt;&lt;/p&gt;
+                        &lt;p&gt;&lt;input type="text" name="edad"&gt;&lt;/p&gt;
+                        &lt;p&gt;&lt;input type="submit"&gt;&lt;/p&gt;
+                        &lt;/form&gt;
+                        &lt;/section&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt; 
+                    </code>
+                </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-46: </b><span>Definiendo un formulario con el elemento &lt;form&gt;</span>
+            </div><!-- Cierre de código-->
+            <p>
+                La información insertada en el formulario se envía al servidor para ser procesada. Para que el servidor pueda identificar cada valor, 
+                los elementos deben incluir el atributo <b>name</b>. En el ejemplo del Listado 2-46, llamamos a los campos de entrada "nombre" y "edad" 
+                (el elemento &lt;input&gt; que crea el botón para enviar el formulario no necesita un nombre porque no envía ningún dato al servidor).
+                Los elementos de formulario no generan un salto de línea; se muestran en la pantalla uno detrás del otro. En el Listado 2-46, usamos elementos &lt;p&gt; 
+                para separar los elementos del formulario, este diseño normalmente se logra a través de estilos CSS, como veremos en el Capítulo 4. El resultado se 
+                muestra en la Figura 2-29.
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_2/Figura 2-29 Formulario con dos campos de entrada y un botón para enviar los datos.jpg" alt="Figura 2-29">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 2-29: </b><span>Formulario con dos campos de entrada y un botón para enviar los datos</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <p>
+                Otro atributo que podemos usar es <b>value</b>. Por defecto, los navegadores le dan al botón el título
+                Enviar (Submit), pero podemos usar el atributo value para modificarlo.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="es"&gt;
+                    &lt;head&gt;
+                    &lt;meta charset="utf-8"&gt;
+                    &lt;title&gt;Formularios&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;section&gt;
+                    &lt;form name="formulario" method="get" action="procesar.php"&gt;
+                    &lt;p&gt;&lt;input type="text" name="nombre"&gt;&lt;/p&gt;
+                    &lt;p&gt;&lt;input type="text" name="edad"&gt;&lt;/p&gt;
+                    &lt;p&gt;&lt;input type="submit" value="Enviar Datos"&gt;&lt;/p&gt;
+                    &lt;/form&gt;
+                    &lt;/section&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt; 
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-47: </b><span>Asignando un título diferente para el botón Enviar</span>
+            </div><!-- Cierre de código-->
+            <p>
+                El atributo <b>value</b> también se puede usar para declarar el valor inicial de un elemento. Por ejemplo, podemos insertar la <b>edad</b> del usuario en el 
+                campo edad si ya la conocemos.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="es"&gt;
+                    &lt;head&gt;
+                    &lt;meta charset="utf-8"&gt;
+                    &lt;title&gt;Formularios&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;section&gt;
+                    &lt;form name="formulario" method="get" action="procesar.php"&gt;
+                    &lt;p&gt;&lt;input type="text" name="nombre"&gt;&lt;/p&gt;
+                    &lt;p&gt;&lt;input type="text" name="edad" value="35"&gt;&lt;/p&gt;
+                    &lt;p&gt;&lt;input type="submit" value="Enviar Datos"&gt;&lt;/p&gt;
+                    &lt;/form&gt;
+                    &lt;/section&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt; 
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-48: </b><span>Declarando valores iniciales</span>
+            </div><!-- Cierre de código-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Hágalo usted mismo.jpg" alt="Hágalo usted mismo">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>Hágalo usted mismo:</b>
+                        copie el código del Listado 2-48 dentro de su archivo
+                        HTML y abra el documento en su navegador. Debería ver un formulario
+                        similar al de la Figura 2-29 pero con el número 35 dentro del campo edad y
+                        el botón para enviar el formulario con el título Enviar datos.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <p>
+                Los formularios necesitan incluir descripciones que le indiquen al usuario lo datos que debe introducir. Por esta razón, 
+                HTML incluye el elemento &lt;label&gt;. Le indican al usuario qué valor debe introducir, además ayudan al
+                navegador a identificar cada parte del formulario. Para asociar un elemento &lt;label&gt; podemos incluir el elemento de 
+                formulario dentro del elemento &lt;label&gt;, como muestra el siguiente ejemplo.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="es"&gt;
+                    &lt;head&gt;
+                    &lt;meta charset="utf-8"&gt;
+                    &lt;title&gt;Formularios&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;section&gt;
+                    &lt;form name="formulario" method="get" action="procesar.php"&gt;
+                    &lt;p&gt;
+                    &lt;label&gt;Nombre: &lt;input type="text" name="nombre"&gt;&lt;/label&gt;
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                    &lt;label&gt;Edad: &lt;input type="text" name="edad"&gt;&lt;/label&gt;
+                    &lt;/p&gt;
+                    &lt;p&gt;&lt;input type="submit" value="Enviar"&gt;&lt;/p&gt;
+                    &lt;/form&gt;
+                    &lt;/section&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;                    
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-49: </b><span>Identificando elementos de formulario</span>
+            </div><!-- Cierre de código-->
+            <p>
+                Otra alternativa para asociar un elemento &lt;label&gt; con su elemento de formulario es
+                implementando el atributo <b>for</b>. El atributo <b>for</b> conecta el elemento &lt;label&gt; con el
+                elemento de formulario por medio del valor del atributo <b>id</b>, según ilustra el siguiente ejemplo.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="es"&gt;
+                    &lt;head&gt;
+                    &lt;meta charset="utf-8"&gt;
+                    &lt;title&gt;Formularios&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;section&gt;
+                    &lt;form name="formulario" method="get" action="procesar.php"&gt;
+                    &lt;p&gt;
+                    &lt;label for="nombre"&gt;Nombre: 
+                    &lt;input type="text" name="nombre" id="nombre"&gt;&lt;/label&gt;
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                    &lt;label for="edad"&gt;Edad: 
+                    &lt;input type="text" name="edad" id="edad"&gt;&lt;/label&gt;
+                    &lt;/p&gt;
+                    &lt;p&gt;&lt;input type="submit" value="Enviar"&gt;&lt;/p&gt;
+                    &lt;/form&gt;
+                    &lt;/section&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;                    
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-50: </b><span>Asociando etiquetas con elementos por medio del atributo for</span>
+            </div><!-- Cierre de código-->
+            <p>
+                El elemento <b>&lt;label&gt;</b> lo único que hace es asociar una etiqueta con un elemento, por lo tanto, el texto se muestra en pantalla con el tipo de
+                letra y el tamaño por defecto.
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_2/Figura 2-30 Elementos identificados con una etiqueta.jpg" alt="Figura 2-5">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 2-30: </b><span>Elementos identificados con una etiqueta</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <p>
+                Los campos de entrada usados en los ejemplos anteriores eran de tipo <b>text</b>, lo que significa que los usuarios pueden introducir cualquier clase de 
+                texto que deseen, pero el primer campo espera un nombre, por lo que no debería permitir que se introduzcan números o textos muy extensos, y el segundo campo
+                espera la edad del usuario, por lo que no debería aceptar ningún tipo de carácter excepto números. Para determinar cuántos caracteres se pueden introducir, 
+                el elemento <b>&lt;input&gt;</b> debe incluir los siguientes atributos.
+            </p>
+            <ul>
+                <li class="listas">
+                    <p>
+                        <b>maxlength--</b>
+                        Este atributo especifica el máximo número de caracteres que se permite introducir en el campo.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>minlength--</b>
+                        Este atributo especifica el mínimo número de caracteres que se permite introducir en el campo.
+                    </p>
+                </li>
+            </ul>
+            <p>
+                El siguiente ejemplo limita el nombre a un máximo de 15 caracteres.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="es"&gt;
+                    &lt;head&gt;
+                    &lt;meta charset="utf-8"&gt;
+                    &lt;title&gt;Formularios&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;section&gt;
+                    &lt;form name="formulario" method="get" action="procesar.php"&gt;
+                    &lt;p&gt;&lt;label&gt;Nombre: &lt;input type="text" name="nombre"
+                    maxlength="15"&gt;&lt;/label&gt;&lt;/p&gt;
+                    &lt;p&gt;&lt;label&gt;Edad: &lt;input type="text" name="edad"&gt;&lt;/label&gt;&lt;/p&gt;
+                    &lt;p&gt;&lt;input type="submit" value="Enviar"&gt;&lt;/p&gt;
+                    &lt;/form&gt;
+                    &lt;/section&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    &lt;/html&gt;                    
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-51: </b><span>Declarando el máximo número de caracteres permitidos</span>
+            </div><!-- Cierre de código-->
+        </section>
+    </main>
+
+    <footer class="footer">
+        &copy; Derechos Reservados 2023
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>2.1 Estructura</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Estructura principal de un página web usando HTML">
+    <meta name="keywords" content="HTML, Estructura, Tipo de document, Elementos estructurales, Atributos globales">
+    <link rel="icon" href="/imagenes/icons/cabecera_libro.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Krub:wght@400;700&family=Roboto:wght@900&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/recursos/styles.css">
+    <link rel="stylesheet" href="/recursos/normalize.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">Capítulo 2 HTML</h1>
+    </header>
+    
+    <nav class="navegacionFront">
+        <a class="navegacionFront__enlace" href="/index.html">Inicio</a>
+        <a class="navegacionFront__enlace" href="2.2.Contenido.html">2.2 Contenido</a>
+    </nav>
+
+    <main class="contenedor">
+        <section class="contenedor__titulos" id="estructura">
+            <!-- Titulo-->
+            <h2 class="contenedor__titulos--h2">2.1 Estructura</h2>
+            <p>
+                A pesar de las innovaciones introducidas por CSS y JavaScript, el código HTML sigue siendo la parte fundamental
+                del documento. Esta
+                estructura define el espacio donde el contenido estático y dinámico es posicionado.
+            </p>
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Importante.jpg" alt="Importante">
+                </div>
+                <div class="imagenes__texto">                 
+                    <p>
+                        <b>IMPORTANTE:</b>
+                        La mayoría de editores ofrecen herramientas para ayudarle a escribir sus documentos, pero no controlan la
+                        validez del código. Si omite una etiqueta o se olvida de escribir una parte del código, el editor no le advierte
+                        sobre el error cometido. Para controlar el código de sus documentos, puede usar herramientas de validación en
+                        línea, http://validator.w3.org.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+        </section>
+        
+        <section class="contenedor__titulos" id="tipodedocumento">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">Tipo de documento</h3>
+            <p>
+                Lo primero que debemos hacer en la construcción de un documento HTML es indicar su tipo. Debemos agregar la
+                declaración &lt;!DOCTYPE&gt; al comienzo del archivo. Se requiere al comienzo de cada documento para ayudar al
+                navegador a decidir cómo debe generar la página web. Para documentos programados con HTML5,
+                la declaración debe incluir el atributo html, según definimos en el siguiente ejemplo.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;!DOCTYPE html&gt;
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-1:</b><span>Incluyendo la declaración &lt;!DOCTYPE&gt;</span>
+            </div><!-- Cierre de código-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Hágalo usted mismo.jpg" alt="Hágalo usted mismo">
+                </div>
+                <div class="imagenes__texto">                 
+                    <p>
+                        <b>Hágalo usted mismo:</b>
+                        Abra Atom o su editor favorito y cree un nuevo archivo
+                        llamado index.html para probar los códigos de este capítulo (también puede
+                        usar el archivo creado en el capítulo anterior).
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Importante.jpg" alt="Importante">
+                </div>
+                <div class="imagenes__texto">                 
+                    <p>
+                        <b>IMPORTANTE:</b>
+                        La declaración &lt;!DOCTYPE&gt; debe ser la primera línea de su documento,
+                        sin ningún espacio o código previo. Esto obliga a los navegadores a interpretar HTML5.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>Lo básico:</b>
+                        Algunos de los elementos y atributos introducidos en HTML5 no
+                        están disponibles en viejos navegadores como Internet Explorer. Para saber
+                        qué navegadores implementan estos elementos visite www.caniuse.com.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+        </section>
+
+        <section class="contenedor__titulos" id="elementosestructurales">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">Elementos estructurales</h3>
+            <p>
+                Los elementos HTML conforman una estructura de tipo
+                árbol con el elemento &lt;html&gt; como su raíz. Los siguientes son los
+                elementos disponibles para definir la columna vertebral de la estructura que el navegador necesita para mostrar
+                la página.
+            </p>
+            <ul>
+                <li class="listas">
+                    <p>
+                        <b>&lt;html&gt;</b>
+                        Este elemento delimita el código HTML. Puede incluir el atributo lang para
+                        definir el idioma del contenido del documento.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;head&gt;</b>
+                        Este elemento se usa para definir la información necesaria para configurar la
+                        página web, como el título, el tipo de codificación de caracteres y los archivos externos
+                        requeridos por el documento.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;body&gt;</b>
+                        Este elemento delimita el contenido del documento (la parte visible de la
+                        página).
+                    </p>
+                </li>
+            </ul>
+            <p>
+                Después de declarar el tipo de documento, tenemos que construir la estructura comenzando por el elemento
+                &lt;html&gt;.
+                Este elemento puede incluir el atributo <b>lang</b> para declarar el idioma en el que vamos a escribir el
+                contenido de la
+                página, tal como muestra el siguiente ejemplo.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+                <pre class="codigo">
+                    <code class="codigo__pre">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="es"&gt;
+                        
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-2:</b><span>Incluyendo el elemento &lt;html&gt;</span>
+            </div><!-- Cierre de código-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>Lo básico:</b>
+                        Existen varios valores disponibles para el atributo lang, en para inglés, es para español, fr para francés,
+                        entre otros. Para obtener
+                        una lista completa, visite https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <p>
+                El código HTML insertado entre las etiquetas &lt;html&gt; se tiene que dividir en dos secciones: la cabecera y
+                el cuerpo.
+                La cabecera va primero, está compuesta por etiquetas de apertura y cierre.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+                <pre class="codigo">
+                    <code class="codigo__pre">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="es"&gt;
+                        &lt;head&gt;
+        
+                        &lt;/head&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-3:</b><span>Incluyendo el elemento &lt;head&gt;</span>
+            </div><!-- Cierre de código-->
+            <p>
+                Entre las etiquetas &lt;head&gt; debemos definir el título de la página web, el tipo de
+                codificación de caracteres, información general acerca del documento, e incorporar los
+                archivos externos con estilos y códigos para generar la página.
+                La información insertada en estas etiquetas no es visible para el usuario.
+                La otra sección principal de un documento HTML es la parte visible del documento que se especifica con el
+                elemento &lt;body&gt;.
+            </p>
+
+            <hr class="linea"><!-- Apertura de código-->
+                <pre class="codigo">
+                    <code class="codigo__pre">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="es"&gt;
+                        &lt;head&gt;
+                        
+                        &lt;/head&gt;
+                        &lt;body&gt;
+        
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-4:</b><span>Incluyendo el elemento &lt;body&gt;</span>
+            </div><!-- Cierre de código-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>Lo básico:</b>
+                        Otra forma de definir la relación entre los elementos es describirlos como padres, hijos o
+                        hermanos, de acuerdo a sus posiciones en la estructura. Por ejemplo, el elemento &lt;body&gt; es hijo del
+                        elemento &lt;html&gt; y
+                        hermano del elemento &lt;head&gt;. Ambos, &lt;body&gt; y &lt;head&gt;, tienen al
+                        elemento &lt;html&gt; como su padre.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <p>
+                La cabecera incluye toda la información y los recursos necesarios para generar la página. Los siguientes son los elementos
+                disponibles para este propósito.
+            </p>
+            <ul>
+                <li class="listas">
+                    <p class="listas__sinespacio">
+                        <b>&lt;title&gt;</b>
+                        Este elemento define el título de la página.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;base&gt;</b>
+                        Define la URL usada por el navegador para establecer la ubicación real de la URL relativas. Debe incluir
+                        el atributo href para declarar
+                        la URL base. Cuando se declara este elemento, en lugar de la URL actual, el navegador usa
+                        la URL asignada al atributo href para completar las URL relativas.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;meta&gt;</b>
+                        Representa metadatos asociados con el documento, como la descripción del documento, palabras claves, el
+                        tipo de codificación de caracteres, etc.
+                        Puede incluir los atributos name para describir el tipo de metadata, content para especificar el valor,
+                        y charset para declarar el tipo de codificación
+                        de caracteres a utilizar para procesar el contenido.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;link&gt;</b>
+                        Especifica la relación entre el documento y un recurso externo
+                        (generalmente usado para cargar archivos CSS). puede incluir los atributos
+                        href para declarar la ubicación del recurso, rel para definir el tipo de relación, media
+                        para especificar el medio al que el recurso está asociado (pantalla, impresora, etc.), y type
+                        y sizes para declarar el tipo de recurso y su tamaño (usado a menudo para cargar iconos).
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;style&gt;</b>
+                        Este elemento se usa para declarar estilos CSS dentro del documento (estudiado
+                        en el Capítulo 3).
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;script&gt;</b>
+                        Este elemento se usa para cargar o declarar código JavaScript (estudiado en el
+                        Capítulo 6).
+                    </p>
+                </li>
+            </ul>
+            <p>
+                Lo primero que tenemos que hacer cuando declaramos la cabecera del documento es
+                especificar el título de la página con el elemento &lt;title&gt;. Este texto es el que muestran los
+                navegadores en la parte superior de la ventana, y es lo que los usuarios ven cuando buscan
+                información en nuestro sitio web por medio de motores de búsqueda como Google o Yahoo.
+            </p>
+
+            <hr class="linea"><!-- Apertura de código-->
+                <pre class="codigo">
+                    <code class="codigo__pre">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="es"&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;Este texto es el título del documento&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-5:</b><span>Incluyendo el elemento &lt;title&gt;</span>
+            </div><!-- Cierre de código-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Hágalo usted mismo.jpg" alt="Hágalo usted mismo">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>Hágalo usted mismo:</b>
+                        Reemplace el código en su archivo index.html por el
+                        código del Listado 2-5 y abra el documento en su navegador (para abrirlo,
+                        puede hacer doble clic en el archivo o seleccionar la opción Abrir Archivo
+                        desde el menú Archivos en su navegador). Debería ver el texto especificado
+                        entre las etiquetas &lt;title&gt; en la parte superior de la ventana.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>Lo básico:</b>
+                        El elemento &lt;title&gt; en el ejemplo del Listado 2-5 se ha desplazado
+                        hacia la derecha. El espacio en blanco se usa para ayudar al
+                        desarrollador a visualizar la posición del elemento dentro de la jerarquía del
+                        documento (los navegadores ignoran los espacios en blanco y los
+                        saltos de líneas que se encuentran fuera de los elementos).
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <p>
+                Además del título, también tenemos que declarar los metadatos del documento. Los
+                metadatos incluyen información acerca de la página que los navegadores, y los
+                motores de búsqueda, utilizan para clasificar la página web. Los valores se declaran
+                con el elemento &lt;meta&gt;. Este elemento incluye varios atributos, pero cuáles usemos dependerá del tipo de
+                información que queremos declarar. Por ejemplo, el valor más
+                importante es la tabla de caracteres para presentar el texto en pantalla,
+                el cual se declara con el atributo charset.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+                <pre class="codigo">
+                    <code class="codigo__pre">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="es"&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;Este texto es el título del documento&lt;/title&gt;
+                            &lt;meta charset="utf-8"&gt;
+                        &lt;/head&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-6:</b><span>Incluyendo el elemento &lt;meta&gt;</span>
+            </div><!-- Cierre de código-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>Lo básico:</b>
+                        Listado 2-6 define el grupo de caracteres como utf-8,
+                        que es el que se recomienda debido a que incluye todos los caracteres utilizados
+                        en la mayoría de los idiomas.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <p>
+                Se pueden incluir múltiples elementos &lt;meta&gt;. Por
+                ejemplo, dos datos que los navegadores pueden considerar son la descripción de la página y las palabras claves
+                que identifican su contenido. Estos elementos
+                &lt;meta&gt; requieren el atributo name con los valores "description" y
+                "keywords", y el atributo content con el texto que queremos asignar como descripción y
+                palabras clave (las palabras clave se deben separar por comas).
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+                <pre class="codigo">
+                    <code class="codigo__pre">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="es"&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;Este texto es el título del documento&lt;/title&gt;
+                            &lt;meta charset="utf-8"&gt;
+                            &lt;meta name="description" content="Este es un documento HTML5"&gt;
+                            &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+                        &lt;/head&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-7:</b><span>Agregando información adicional con el elemento &lt;meta&gt;</span>
+            </div><!-- Cierre de código-->
+            <p>
+                Otro elemento importante de la cabecera es &lt;link&gt;. Por
+                ejemplo, algunos navegadores muestran un icono en la parte superior. Para cargar este icono, tenemos que incluir
+                un elemento &lt;link&gt; con el atributo rel definido como icon, el atributo href con la ubicación del archivo
+                que contiene el icono, el atributo type para especificar el formato, y el
+                atributo sizes con el ancho y la altura del icono separados por la letra x.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+                <pre class="codigo">
+                    <code class="codigo__pre">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="es"&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;Este texto es el título del documento&lt;/title&gt;
+                            &lt;meta charset="utf-8"&gt;
+                            &lt;meta name="description" content="Este es un documento HTML5"&gt;
+                            &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+                            &lt;link rel="icon" href="imagenes/favicon.png" type="image/png" sizes="16x16"&gt;
+                        &lt;/head&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-8:</b><span>Incluyendo el icono del documento</span>
+            </div><!-- Cierre de código-->
+            <p>
+                El navegador tiene poco espacio para mostrar el icono, por lo tanto el tamaño es de unos 16 píxeles por 16
+                píxeles. La Figura 2-1 muestra cómo se ve la ventana que contiene un icono (en este caso, una imagen
+                con la letra M).
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_2/Figura 2-1 El icono del documento en el navegador.jpg" alt="Figura 2-1">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 2-1: </b><span>El icono del documento en el navegador</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Hágalo usted mismo.jpg" alt="Hágalo usted mismo">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>Hágalo usted mismo:</b>
+                        Actualice el código en su archivo index.html con el
+                        ejemplo del Listado 2-8. El icono se carga desde el archivo favicon.png que
+                        debe copiar dentro del directorio de su proyecto. Puede descargar este
+                        archivo desde nuestro sitio web o usar el suyo.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>Lo básico:</b>
+                        El valor asignado al atributo type del elemento &lt;link&gt; debe ser
+                        especificado como un tipo MIME. Para indicar al sistema el formato de su contenido. Por ejemplo, el tipo
+                        MIME de un archivo HTML es text/html, image/jpeg e image/png para imágenes JPEG y PNG.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <p>
+                El elemento &lt;link&gt; se usa comúnmente para cargar archivos CSS, solo necesitamos incluir el atributo rel
+                para declarar el tipo de recurso (para hojas de estilo CSS asignar el valor
+                "stylesheet") y el atributo href con la URL que determina la ubicación del archivo
+                (estudiaremos cómo crear esta clase de archivos y definir estilos CSS en el Capítulo 3).
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+                <pre class="codigo">
+                    <code class="codigo__pre">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="es"&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;Este texto es el título del documento&lt;/title&gt;
+                            &lt;meta charset="utf-8"&gt;
+                            &lt;meta name="description" content="Este es un documento HTML5"&gt;
+                            &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+                            &lt;link rel="stylesheet" href="misestilos.css"&gt;
+                        &lt;/head&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-9:</b><span>Cargando un archivo CSS con el elemento &lt;link&gt;</span>
+            </div><!-- Cierre de código-->
+            <p>
+                Con la cabecera lista, es hora de construir el cuerpo. HTML siempre ha ofrecido diferentes maneras de construir
+                la información del documento. Uno de los primeros elementos utilizados fue
+                &lt;table&gt; (tabla). Este elemento permitía a los desarrolladores organizar datos, textos,
+                imágenes, en filas y columnas de celdas. Con la introducción de CSS, estas tablas ya no resultaba práctica, por
+                lo que los desarrolladores comenzaron a implementar un elemento ado &lt;div&gt; (división). Pero &lt;div&gt;,
+                así como &lt;table&gt;, no facilita demasiada información acerca de las partes del cuerpo que
+                representa. Esta es la razón por la que HTML5 introdujo nuevos elementos que permiten a los desarrolladores
+                identificar cada parte del documento. La siguiente lista incluye todos los elementos disponibles para definir la estructura del cuerpo.
+            </p>
+            <ul>
+                <li class="listas">
+                    <p>
+                        <b>&lt;div&gt;</b>
+                        Define una división genérica. Se usa cuando no se puede aplicar ningún otro elemento.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;main&gt;</b>
+                        Define una división que contiene el contenido principal del documento (el contenido que representa el
+                        tema central de la página).
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;nav&gt;</b>
+                        Define una división para la navegación, como bloques de enlaces necesarios para navegar en el sitio web.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;section&gt;</b>
+                        Define una sección genérica. Se usa frecuentemente para separar contenido temático, o bloques que ayudan
+                        a organizar el contenido
+                        principal.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;aside&gt;</b>
+                        Define una división que contiene información relacionada con el contenido principal como artículos o
+                        enlaces
+                        que apuntan a publicaciones anteriores.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;article&gt;</b>
+                        Representa un artículo independiente, como un mensaje de foro, el artículo de una revista, un
+                        comentario, etc.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;header&gt;</b>
+                        Define la cabecera del cuerpo o de secciones dentro del cuerpo.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>&lt;footer&gt;</b>
+                        Define el pie del cuerpo o de secciones dentro del cuerpo.
+                    </p>
+                </li>
+            </ul>
+            <p>
+                Estos elementos siguen un patrón que se encuentra en la mayoría de los sitios web.
+                La Figura 2-2, ilustra este tipo de diseño.
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_2/Figura 2-2 Representación visual de un diseño web tradicional.jpg" alt="Figura 2-2">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 2-2: </b><span>Representación visual de un diseño web tradicional</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <p>
+                En la Figura 2-3 aplicamos los elementos introducidos anteriormente para definir
+                el diseño de la Figura 2-2.
+            </p>
+            <div class="imagenes">
+                <img class="img" src="/imagenes/Capitulo_2/Figura 2-3 Representación de la estructura de un documento usando elementos de HTML5.jpg" alt="Figura 2-3">
+                <div class="imagenes__textoFigura">
+                    <b>Figura 2-3: </b><span>Representación de la estructura de un documento usando elementos de HTML5</span>
+                </div>
+            </div><!-- .imagenes cierre-->
+            <p>
+                El primer elemento es &lt;header&gt;. No confundir con el elemento &lt;head&gt;, &lt;header&gt; se ha definido
+                para facilitar títulos o subtítulos para el cuerpo o secciones dentro del cuerpo del documento. En el
+                siguiente ejemplo, este elemento se usa para definir el título de la página web.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+                <pre class="codigo">
+                    <code class="codigo__pre">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="es"&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;Este texto es el título del documento&lt;/title&gt;
+                            &lt;meta charset="utf-8"&gt;
+                            &lt;meta name="description" content="Este es un documento HTML5"&gt;
+                            &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+                            &lt;link rel="stylesheet" href="misestilos.css"&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;header&gt;
+                                Este es el título
+                            &lt;/header&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-10:</b><span>Incluyendo el elemento &lt;header&gt;</span>
+            </div><!-- Cierre de código-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Hágalo usted mismo.jpg" alt="Hágalo usted mismo">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>Hágalo usted mismo:</b>
+                        Reemplace el código en su archivo index.html por el
+                        código del Listado 2-10 y abra el documento en su navegador. Debería ver el
+                        título de la página en la pantalla.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <p>
+                La siguiente sección es la barra de navegación y se representa con el elemento &lt;nav&gt;.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="es"&gt;
+                    &lt;head&gt;
+                        &lt;title&gt;Este texto es el título del documento&lt;/title&gt;
+                        &lt;meta charset="utf-8"&gt;
+                        &lt;meta name="description" content="Este es un documento HTML5"&gt;
+                        &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+                        &lt;link rel="stylesheet" href="misestilos.css"&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;header&gt;
+                            Este es el título
+                        &lt;/header&gt;
+                        &lt;nav&gt;
+                            Principal | Fotos | Videos | Contacto
+                        &lt;/nav&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-11:</b><span>Incluyendo el elemento &lt;nav&gt;</span>
+            </div><!-- Cierre de código-->
+            <p>
+                &lt;nav&gt; se ha creado para la navegación, como el menú principal. Otro ejemplo es el que ofrecen los
+                elementos &lt;main&gt;, &lt;section&gt;, y
+                &lt;aside&gt;. Debido a que la sección <b>Información principal</b> abarca más, se representa por elementos
+                &lt;section&gt; (uno o varios, dependiendo
+                del diseño), y debido al tipo de información que contiene, el elemento &lt;aside&gt; se ubica en los laterales
+                de la página. Como se pueden usar en otras áreas del documento,
+                se implementa el elemento &lt;main&gt; para agruparlos, como el siguiente ejemplo.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="es"&gt;
+                    &lt;head&gt;
+                        &lt;title&gt;Este texto es el título del documento&lt;/title&gt;
+                        &lt;meta charset="utf-8"&gt;
+                        &lt;meta name="description" content="Este es un documento HTML5"&gt;
+                        &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+                        &lt;link rel="stylesheet" href="misestilos.css"&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;header&gt;
+                            Este es el título
+                        &lt;/header&gt;
+                        &lt;nav&gt;
+                            Principal | Fotos | Videos | Contacto
+                        &lt;/nav&gt;
+                        &lt;main&gt;
+                            &lt;section&gt;
+                                Artículos
+                            &lt;/section&gt;
+                            &lt;aside&gt;
+                                Cita del artículo uno
+                                Cita del artículo dos
+                            &lt;/aside&gt;
+                        &lt;/main&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-12:</b><span>Organizando el contenido principal</span>
+            </div><!-- Cierre de código-->
+            <p>
+                El elemento &lt;aside&gt; describe la información no un lugar en la estructura,
+                por lo que se podría ubicar en cualquier parte del diseño, mientras su
+                contenido no se considere el contenido principal del documento.
+            </p>
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Importante.jpg" alt="Importante">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>IMPORTANTE:</b>
+                        En la página web algunas de estas secciones se muestran una al lado de la otra (por ejemplo, las
+                        secciones Información principal y Barra lateral se muestran en una misma línea). Esto se debe a
+                        que HTML5 delega la tarea de presentar el documento a CSS. Estudiaremos CSS en los Capítulos 3 y 4.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <p>
+                Las páginas web generalmente presentan la información
+                dividida en secciones que comparten características similares. El elemento &lt;article&gt; nos
+                permite identificar cada una de estas partes. En el siguiente ejemplo, implementamos este
+                elemento
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="es"&gt;
+                    &lt;head&gt;
+                        &lt;title&gt;Este texto es el título del documento&lt;/title&gt;
+                        &lt;meta charset="utf-8"&gt;
+                        &lt;meta name="description" content="Este es un documento HTML5"&gt;
+                        &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+                        &lt;link rel="stylesheet" href="misestilos.css"&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;header&gt;
+                            Este es el título
+                        &lt;/header&gt;
+                        &lt;nav&gt;
+                            Principal | Fotos | Videos | Contacto
+                        &lt;/nav&gt;
+                        &lt;main&gt;
+                            &lt;section&gt;
+                                &lt;article&gt;
+                                    Este es el texto de mi primer artículo
+                                &lt;/article&gt;
+                                &lt;article&gt;
+                                    Este es el texto de mi segundo artículo
+                                &lt;/article&gt;
+                            &lt;/section&gt;
+                            &lt;aside&gt;
+                                Cita del artículo uno
+                                Cita del artículo dos
+                            &lt;/aside&gt;
+                        &lt;/main&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-13:</b><span>Incluyendo el elemento &lt;article&gt;</span>
+            </div><!-- Cierre de código-->
+            <p>
+                Lo que nos queda por hacer es cerrar el diseño. Con este fin, HTML ofrece el elemento &lt;footer&gt;.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="es"&gt;
+                    &lt;head&gt;
+                        &lt;title&gt;Este texto es el título del documento&lt;/title&gt;
+                        &lt;meta charset="utf-8"&gt;
+                        &lt;meta name="description" content="Este es un documento HTML5"&gt;
+                        &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+                        &lt;link rel="stylesheet" href="misestilos.css"&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;header&gt;
+                            Este es el título
+                        &lt;/header&gt;
+                        &lt;nav&gt;
+                            Principal | Fotos | Videos | Contacto
+                        &lt;/nav&gt;
+                        &lt;main&gt;
+                            &lt;section&gt;
+                                &lt;article&gt;
+                                    Este es el texto de mi primer artículo
+                                &lt;/article&gt;
+                                &lt;article&gt;
+                                    Este es el texto de mi segundo artículo
+                                &lt;/article&gt;
+                            &lt;/section&gt;
+                            &lt;aside&gt;
+                                Cita del artículo uno
+                                Cita del artículo dos
+                            &lt;/aside&gt;
+                        &lt;/main&gt;
+                        &lt;footer&gt;
+                            &amp;copy; Derechos Reservados 2016
+                        &lt;/footer&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-14:</b><span>Incluyendo el elemento &lt;footer&gt;</span>
+            </div><!-- Cierre de código-->
+            <p>
+                El elemento &lt;footer&gt; y el elemento &lt;header&gt; también se
+                pueden utilizar dentro del cuerpo para representar el comienzo y final de una sección.
+            </p>
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>Lo básico:</b>
+                        El ejemplo del Listado 2-14 incluye la cadena de caracteres &amp;copy;. Sin embargo, cuando se carga el
+                        documento, el navegador reemplaza estos caracteres por (©). Estas cadenas de caracteres se denominan entidades (character
+                        entities) y representan caracteres especiales. Por ejemplo, si quiere incluir los caracteres < y> dentro de un
+                        texto, debe representarlos con &amp;lt; y &amp;gt;. Otras entidades son &amp;amp; (&), &amp;quot; ("), &amp;apos; ('),
+                        &amp;pound; (£), y &amp;euro; (€).
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+        </section>
+    
+        <section class="contenedor__titulos" id="atributosglobales">
+            <!-- Subtítulo-->
+            <h3 class="contenedor__titulos--h3">Atributos globales</h3>
+            <p>
+                Algunos elementos como &lt;section&gt; y &lt;aside&gt; se pueden utilizar muchas veces para representar
+                partes de la estructura, y otros como &lt;div&gt; para separar contenido dentro de secciones. Por esta
+                razón, HTML define atributos globales que podemos usar para asignar identificadores
+                personalizados a cada elemento.
+            </p>
+            <ul>
+                <li class="listas">
+                    <p>
+                        <b>id</b>
+                        --Este atributo nos permite asignar un identificador único a un elemento.
+                    </p>
+                </li>
+                <li class="listas">
+                    <p>
+                        <b>class</b>
+                        --Este atributo asigna el mismo identificador a un grupo de elementos.
+                    </p>
+                </li>
+            </ul>
+            <p>
+                El atributo id identifica elementos independientes con un valor único, mientras que el
+                valor del atributo class se puede duplicar para asociar elementos con características
+                similares. Por ejemplo, si tenemos dos o más elementos &lt;section&gt; que necesitamos
+                diferenciar entre sí, podemos asignar el atributo id a cada uno con valores que declaran sus
+                propósitos.
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;main&gt;
+                    &lt;section id="noticias"&gt;
+                        Artículos largos
+                    &lt;/section&gt;
+                    &lt;section id="noticiaslocales">"&gt;
+                        Artículos cortos
+                    &lt;/section&gt;
+                    &lt;aside&gt;
+                        Cita del artículo uno
+                        Cita del artículo dos
+                    &lt;/aside&gt;
+                &lt;/main&gt;
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-15:</b><span>Identificando elementos con el atributo id</span>
+            </div><!-- Cierre de código-->
+            <p>
+                El ejemplo del Listado 2-15 incluye dos elementos &lt;section&gt; para separar artículos de acuerdo a su extensión. 
+                El primer elemento &lt;section&gt; se ha identificado con el valor "noticias" y el segundo elemento con el valor 
+                "noticiaslocales". Por otro lado, el siguiente ejemplo divide el contenido con elementos &lt;div&gt;. Debido a que todos tienen un contenido
+                similar, compartirán los mismos estilos y, por lo tanto, deberíamos identificarlos con el mismo
+                valor (todo son de la misma clase).
+            </p>
+            <hr class="linea"><!-- Apertura de código-->
+            <pre class="codigo">
+                <code class="codigo__pre">
+                    &lt;main&gt;
+                    &lt;section"&gt;
+                        &lt;div class="libros"&gt;Libro: IT, Stephen King&lt;/div&gt;
+                        &lt;div class="libros"&gt;Libro: Carrie, Stephen King&lt;/div&gt;
+                        &lt;div class="libros"&gt;Libro: El resplandor, Stephen King&lt;/div&gt;
+                        &lt;div class="libros"&gt;Libro: Misery, Stephen King&lt;/div&gt;
+                    &lt;/section&gt;
+                    &lt;aside&gt;
+                        Cita del artículo uno
+                        Cita del artículo dos
+                    &lt;/aside&gt;
+                &lt;/main&gt;
+                </code>
+            </pre>
+            <hr class="linea">
+            <div class="imagenes__textoCodigo"">
+                <b>Listado 2-16:</b><span>Identificando elementos con el atributo class</span>
+            </div><!-- Cierre de código-->
+            <p>
+                En el código del Listado 2-16, hemos creado varias divisiones con elementos &lt;div&gt; identificado 
+                con el atributo <b>class</b> y el valor "libros", cada vez que modificamos elementos referenciando la clase 
+                <b>libros</b>, todos estos elementos se ven afectados.
+            </p>
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Importante.jpg" alt="Importante">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>IMPORTANTE:</b>
+                        Los valores de los atributos <b>id</b> y <b>class</b> son usados para identificar elementos por
+                        reglas CSS y código JavaScript para acceder y modificar.
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+            <div class="imagenesAvisos">
+                <div class="imagenes__img">
+                    <img class="img__iconos" src="/imagenes/Basico.jpg" alt="Basico">
+                </div>
+                <div class="imagenes__texto">
+                    <p>
+                        <b>Lo básico:</b>
+                        Los valores asignados a estos atributos son arbitrarios. Puede asignarles cualquier valor que desee, 
+                        siempre y cuando no incluya ningún espacio en blanco (el atributo <b>class</b> utiliza espacios para asignar 
+                        múltiples clases a un mismo elemento).
+                    </p>
+                </div>
+            </div><!-- .imagenesAvisos cierre-->
+        </section>
+    </main>
+
+    <footer class="footer">
+        &copy; Derechos Reservados 2023
+    </footer>
+</body>
+
+</html>

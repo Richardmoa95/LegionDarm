@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+
+<body>
+    <header>
+        <h1>CSS</h1>
+    </header>
+    <main>
+        <section>
+            <h2>¿Qué hace un :root en CSS?</h2>
+            <p>
+                En CSS, :root es un pseudo-selector que hace referencia al elemento raíz del documento HTML. Es decir,
+                :root se refiere al elemento &lt;html&gt; en el documento HTML.
+                Se utiliza para establecer variables CSS globales que se pueden utilizar en todo el documento, y que se
+                pueden actualizar y modificar fácilmente en un solo lugar. La sintaxis para definir una variable CSS es
+                la siguiente:
+            </p>
+            <pre>
+                <code>
+                    :root {
+                        --variable: valor;
+                      }
+                </code>
+            </pre>
+            <p>
+                Por ejemplo, si queremos definir una variable para el color principal de nuestro sitio web, podemos
+                hacer lo siguiente:
+            </p>
+            <pre>
+                <code>
+                    :root {
+                        --color-primario: #007bff;
+                      }
+                </code>
+            </pre>
+            <p>
+                Luego, podemos utilizar esta variable en cualquier lugar del documento:
+            </p>
+            <pre>
+                <code>
+                    h1 {
+                        color: var(--color-primario);
+                      }
+                </code>
+            </pre>
+            <p>
+                De esta manera, si queremos cambiar el color principal de nuestro sitio web, solo tenemos que modificar
+                la definición de la variable en el selector :root, en lugar de tener que cambiar el valor en cada lugar
+                donde se utiliza la variable.
+
+                Es importante tener en cuenta que :root solo se utiliza una vez en el documento y debe estar en la parte
+                superior del archivo CSS.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
